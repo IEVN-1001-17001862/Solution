@@ -1,0 +1,76 @@
+<div class="carousel-container">
+  <div class="carousel-wrapper">
+    <div class="carousel-slide" *ngFor="let image of images; let i = index" [class.active]="i === activeSlide">
+      <img [src]="image" alt="Slide image">
+    </div>
+  </div>
+</div>
+<div class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+  <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
+<div class="grid-cols-1 sm:grid md:grid-cols-2 ">
+  <div
+    class="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+    <a href="#!">
+      <img
+        class="rounded-t-lg"
+        src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+        alt="Hollywood Sign on The Hill" />
+    </a>
+    <div class="p-6">
+      <h1 class="font-ginebra text-lg" style="color: #78660C; margin-left: 0.9rem;">Solution Idea</h1>
+      <p class="card-text font-ginebra text-lg" style="margin-left: 0.9rem; margin-right: 0.9rem;">
+        Provides quality environmental, health and safety consulting services. We have learned to serve the world's largest companies as well as medium national enterprises and successful small fast-growing business. Our professionals are experienced internationally and strive to deliver seamless, consistent services wherever our clients operate, one project at a time. We are characterized by our ability to develop multidisciplinary solutions for our clients and to provide effective services to meet their most pressing needs.
+      </p>
+    </div>
+    <br>
+  </div>
+
+
+  <div
+    class="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+    <a href="#!">
+      <img
+        class="rounded-t-lg"
+        src="https://tecdn.b-cdn.net/img/new/standard/city/043.webp"
+        alt="Los Angeles Skyscrapers" />
+    </a>
+    <div class="p-6">
+      <h1 class="font-ginebra text-lg" style="color: #78660C; margin-left: 0.9rem;">Our People</h1>
+
+      <p class="card-text font-ginebra text-lg" style="margin-left: 0.9rem; margin-right: 0.9rem;">
+        The environmental, health and safety practice of Solution Idea is formed by professionals with broad experience in EH&S.  They apply best available standards and procedures using a pragmatic and cost effective approach to complete every assignment .Our team of associated professionals can account for decades of years of experience in the environmental industry, specialized training in the Environmental, Health & Safety fields, and other technical capabilities.  They can follow U.S., Mexican and/or corporate protocols per project requirements.        
+      </p>
+    </div>
+  </div>
+</div>
+<br> 
+<div class="wrap">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 card-container">
+    <div *ngFor="let image of images2; let i = index" [@fadeIn]="image.state" id="card-{{i}}" class="rounded-lg overflow-hidden shadow-lg tarjeta-wrap">
+      <div class="tarjeta">
+        <div class="adelante card1"></div>
+        <div class="atras bg-yellow-500 text-white">
+          <p class="text-lg font-semibold">Título de la Imagen</p>
+          <p class="text-sm">Subtítulo</p>
+          <p class="mt-4">Descripción o información relevante de la imagen.</p>
+          <div class="flex justify-end mt-4">
+            <button mat-button>Acción</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>       
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+  

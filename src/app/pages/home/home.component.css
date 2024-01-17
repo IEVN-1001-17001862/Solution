@@ -1,0 +1,81 @@
+.carousel-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .carousel-slide {
+    display: none;
+  }
+  
+  .carousel-slide.active {
+    display: block;
+  }
+  .wrap {
+  width: 1100px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.tarjeta-wrap {
+  margin: 10px;
+  perspective: 800;
+}
+
+.tarjeta {
+  width: 500px !important;
+  height: 350px;
+  background: #F29720;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.7s ease;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.65);
+}
+
+.adelante,
+.atras {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.adelante {
+  width: 100%;
+}
+
+.atras {
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-family: "open sans";
+  background: #FBC458;
+}
+
+.tarjeta-wrap:hover .tarjeta {
+  transform: rotateY(180deg);
+}
+
+.card1 {
+  background-image: url('/assets/misiontrue.png');
+  background-size: cover;
+}
+
+.card2 {
+  background-image: url('/assets/mision1.png');
+  background-size: cover;
+}
+
+.card3 {
+  background-image: url('/assets/valores.png');
+  background-size: cover;
+}
+.bg-D6BF61 {
+  background-color: #D6BF61;
+}
