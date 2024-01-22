@@ -1,9 +1,14 @@
-<div class="carousel-container">
+<div class="carousel-container relative">
   <div class="carousel-wrapper">
     <div class="carousel-slide" *ngFor="let image of images; let i = index" [class.active]="i === activeSlide">
       <img [src]="image" alt="Slide image">
     </div>
   </div>
+
+  <!-- Botón sobre el carrusel -->
+  <button class="absolute bottom-40 left-20 bg-gray-800 text-white px-6 py-3 rounded-full shadow-md hover:bg-gray-700 focus:outline-none focus:shadow-outline-gray transition duration-300">
+    Conocenos
+  </button>
 </div>
 <br>
 <br>
@@ -14,7 +19,7 @@
 <div class="flex justify-center">
   <div class="flex flex-row gap-3 ">
     <!-- Primer elemento -->
-    <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+    <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 transition-transform transform hover:scale-105">
       <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-80">
         <img class="h-30 w-auto" src="assets/dinero.png" alt="Your Company">
             </div>
@@ -29,7 +34,7 @@
             
    
     </div>
-    <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+    <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 transition-transform transform hover:scale-105">
       <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-80">
         <img class="h-30 w-auto" src="assets/tecnica.png" alt="Your Company">
       </div>
@@ -43,7 +48,7 @@
       </div>
   
     </div>
-    <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+    <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 transition-transform transform hover:scale-105">
       <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-80">
         <img class="h-30 w-auto" src="assets/flexibilidad.png" alt="Your Company">
       </div>
@@ -81,7 +86,7 @@
 <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-7xl">
   <div class="md:flex">
       <div class="md:shrink-0">
-        <img class="h-48 w-full object-cover md:h-full md:w-48" src="assets/10.png" alt="Your Company">
+        <img class="h-48 w-full object-cover md:h-full md:w-48" src="assets/1233.JPG" alt="Your Company">
       </div>
       <div class="p-8">
           <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Our People</div>
