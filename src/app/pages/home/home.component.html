@@ -106,11 +106,13 @@
 
 <div class="wrap">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 card-container">
-    <div *ngFor="let image of images2; let i = index" [@fadeIn]="image.state" id="card-{{i}}" class="rounded-lg overflow-hidden shadow-lg tarjeta-wrap">
+    
+    <!-- Tarjeta 1 -->
+    <div [@fadeIn] id="card-1" class="rounded-lg overflow-hidden shadow-lg tarjeta-wrap">
       <div class="tarjeta">
         <div class="adelante card1"></div>
         <div class="atras bg-yellow-500 text-white">
-          <p class="text-lg font-semibold">Título de la Imagen</p>
+          <p class="text-lg font-semibold">Título de la Imagen editado</p>
           <p class="text-sm">Subtítulo</p>
           <p class="mt-4">Descripción o información relevante de la imagen.</p>
           <div class="flex justify-end mt-4">
@@ -118,10 +120,41 @@
           </div>
         </div>
       </div>
-      
     </div>
+
+    <!-- Tarjeta 2 -->
+    <div [@fadeIn] id="card-2" class="rounded-lg overflow-hidden shadow-lg tarjeta-wrap">
+      <div class="tarjeta">
+        <div class="adelante card2"></div>
+        <div class="atras bg-yellow-500 text-white">
+          <p class="text-lg font-semibold">Título de la Imagen editado</p>
+          <p class="text-sm">Subtítulo</p>
+          <p class="mt-4">Descripción o información relevante de la imagen.</p>
+          <div class="flex justify-end mt-4">
+            <button mat-button>Acción</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div [@fadeIn] id="card-3" class="rounded-lg overflow-hidden shadow-lg tarjeta-wrap">
+      <div class="tarjeta">
+        <div class="adelante card3"></div>
+        <div class="atras bg-yellow-500 text-white">
+          <p class="text-lg font-semibold">Título de la Imagen editado</p>
+          <p class="text-sm">Subtítulo</p>
+          <p class="mt-4">Descripción o información relevante de la imagen.</p>
+          <div class="flex justify-end mt-4">
+            <button mat-button>Acción</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>     
+</div>
+    
   
 
 
