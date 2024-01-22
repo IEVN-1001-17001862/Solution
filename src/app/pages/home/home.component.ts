@@ -17,8 +17,10 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class HomeComponent implements OnInit {
   state = 'hide';
   images = [
-    'assets/img4.png',
-    'assets/ing1234.png',
+    'assets/2.png',
+    'assets/3.png',
+    'assets/7.png',
+
     // ... más imágenes si es necesario
   ];
   images2 = [
@@ -58,4 +60,6 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+  
+
 }

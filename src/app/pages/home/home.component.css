@@ -63,13 +63,20 @@
 }
 
 .card1 {
-  background-image: url('/assets/misiontrue.png');
-  background-size: cover;
+  background-image: url('/assets/misionnn.png');
+  background-size: contain;
+  background-position: -10% center; /* Ajusta hacia la izquierda y centra verticalmente */
+  height: 100%;
+  width: 100%;
+  
 }
 
 .card2 {
-  background-image: url('/assets/mision1.png');
-  background-size: cover;
+  background-image: url('/assets/visionn.png');
+  background-size: contain;
+  background-position: -10% center; /* Ajusta hacia la izquierda y centra verticalmente */
+  height: 100%;
+  width: 100%;
 }
 
 .card3 {
@@ -78,4 +85,38 @@
 }
 .bg-D6BF61 {
   background-color: #D6BF61;
+}
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.button {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
 }
