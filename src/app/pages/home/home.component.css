@@ -55,7 +55,7 @@
   text-align: center;
   color: #fff;
   font-family: "open sans";
-  background: #FBC458;
+  background:#FACF8C;
 }
 
 .tarjeta-wrap:hover .tarjeta {
@@ -81,7 +81,10 @@
 
 .card3 {
   background-image: url('/assets/valores.png');
-  background-size: cover;
+  background-size: contain;
+  background-position: -20% center; /* Ajusta hacia la izquierda y centra verticalmente */
+  height: 100%;
+  width: 100%;
 }
 .bg-D6BF61 {
   background-color: #D6BF61;
