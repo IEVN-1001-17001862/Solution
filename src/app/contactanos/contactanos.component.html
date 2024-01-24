@@ -1,0 +1,28 @@
+<form>
+    <mat-form-field appearance="fill">
+        <mat-label>Oficina</mat-label>
+        <mat-select [(ngModel)]="selectedOffice" name="office">
+          <mat-option *ngFor="let office of getOffices()" [value]="office">
+            {{ office }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Asunto</mat-label>
+      <input matInput [(ngModel)]="subject" name="subject">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Cuerpo del Correo</mat-label>
+      <textarea matInput [(ngModel)]="body" name="body"></textarea>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="sendMail()">Enviar Correo</button>
+  </form>
+
+  <a href="https://wa.me/521234567890?text=Hola%20quisiera%20más%20información" class="whatsapp-icon" target="_blank">
+    <img src="assets/whatsapp-icon.png" alt="WhatsApp"/>
+    <span>Escríbenos</span>
+  </a>
+  

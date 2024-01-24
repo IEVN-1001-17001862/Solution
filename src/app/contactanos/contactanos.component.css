@@ -1,0 +1,32 @@
+.whatsapp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    border-radius: 50px;
+    padding: 12px 20px; /* Padding más grande para más presencia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  }
+  
+  .whatsapp-icon:hover {
+    transform: scale(1.1); /* Efecto de hover para resaltar */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra más grande en hover */
+  }
+  
+  .whatsapp-icon img {
+    width: 35px; /* Tamaño del ícono más grande */
+    margin-right: 10px;
+  }
+  
+  .whatsapp-icon span {
+    font-size: 16px; /* Tamaño de fuente más grande */
+    font-weight: bold;
+  }
+  
