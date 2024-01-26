@@ -1,5 +1,10 @@
-<form>
-    <mat-form-field appearance="fill">
+<div class="relative h-screen w-full">
+  <img src="assets/trat8.JPG" alt="Background Image" class="absolute inset-0 w-full h-full object-cover filter blur-sm">
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div class="absolute inset-0 flex flex-col items-center justify-center">
+    <form>
+      <!-- El formulario sigue aquí -->
+      <mat-form-field appearance="fill">
         <mat-label>Oficina</mat-label>
         <mat-select [(ngModel)]="selectedOffice" name="office">
           <mat-option *ngFor="let office of getOffices()" [value]="office">
@@ -7,22 +12,31 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
-  
-    <mat-form-field appearance="fill">
-      <mat-label>Asunto</mat-label>
-      <input matInput [(ngModel)]="subject" name="subject">
-    </mat-form-field>
-  
-    <mat-form-field appearance="fill">
-      <mat-label>Cuerpo del Correo</mat-label>
-      <textarea matInput [(ngModel)]="body" name="body"></textarea>
-    </mat-form-field>
-  
-    <button mat-raised-button color="primary" (click)="sendMail()">Enviar Correo</button>
-  </form>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>Asunto</mat-label>
+        <input matInput [(ngModel)]="subject" name="subject">
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>Cuerpo del Correo</mat-label>
+        <textarea matInput [(ngModel)]="body" name="body"></textarea>
+      </mat-form-field>
+    
+      <button mat-raised-button color="primary" (click)="sendMail()">Enviar Correo</button>
+    </form>
+  </div>
+</div>
+<a href="https://wa.me/521234567890?text=Hola%20quisiera%20más%20información" class="whatsapp-icon" target="_blank">
+  <img src="assets/whatsapp-icon.png" alt="WhatsApp"/>
+  <span>Escríbenos</span>
+</a>
 
-  <a href="https://wa.me/521234567890?text=Hola%20quisiera%20más%20información" class="whatsapp-icon" target="_blank">
-    <img src="assets/whatsapp-icon.png" alt="WhatsApp"/>
-    <span>Escríbenos</span>
-  </a>
-  
+
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- Tu footer o cualquier otra sección sigue después del formulario -->
