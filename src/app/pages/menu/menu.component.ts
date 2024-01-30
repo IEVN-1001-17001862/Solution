@@ -12,7 +12,8 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openModal(modalId: string): void {
+  openModal(event: Event, modalId: string): void {
+    event.preventDefault();  // Evita la recarga de la página al hacer clic en el enlace
     const modal = document.getElementById(modalId);
     if (modal) {
       modal.style.display = 'block';
@@ -27,5 +28,6 @@ export class MenuComponent implements OnInit {
       }
     }
   }
-  
 }
+
+
