@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +7,25 @@ import { Component, OnInit} from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(){ }
+  constructor() { }
 
   ngOnInit(): void {
-    
   }
+
+  openModal(modalId: string): void {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = 'block';
+    }
+  }
+
+  closeModal(event: any, modalId: string): void {
+    if (event.target.classList.contains('modal') || event.target.classList.contains('close')) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+  }
+  
 }

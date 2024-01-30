@@ -1,1 +1,60 @@
-<p>menu works!</p>
+<div class="card">
+    <img src="../../../assets/9.png" alt="Imagen" style="width:50%">
+    <div class="container">
+        <div (click)="openModal('modalSanitaria')">
+            <h4><b>Agua Residual Sanitaria</b></h4>
+            <p>El agua residual sanitaria es aquella que proviene de los desechos de los inodoros, lavabos, regaderas, lavadoras, etc. Este tipo de agua es la que se genera en los hogares, oficinas, escuelas, hospitales, etc.</p>
+        </div>
+        <div (click)="openModal('modalIndustrial')">
+            <h4><b>Agua Residual Industrial</b></h4>
+            <p>El agua residual industrial es aquella que proviene de los procesos industriales, como la industria alimentaria, química, farmacéutica, etc. Este tipo de agua es la que se genera en las industrias, fábricas, etc.</p>
+        </div>
+        <div (click)="openModal('modalSuavizada')">
+            <h4><b>Agua Suavizada</b></h4>
+            <p>El agua suavizada es aquella que proviene de un proceso de suavización, el cual consiste en eliminar los iones de calcio y magnesio del agua, los cuales son los causantes de la dureza del agua.</p>
+        </div>
+        <div (click)="openModal('modalOsmosis')">
+            <h4><b>Agua de Ósmosis Inversa</b></h4>
+            <p>El agua de ósmosis inversa es aquella que proviene de un proceso de ósmosis inversa, el cual consiste en eliminar los sólidos disueltos del agua, los cuales son los causantes de la dureza del agua.</p>
+        </div>
+        <div (click)="openModal('modalUltrapura')">
+            <h4><b>Agua Ultrapura</b></h4>
+            <p>El agua ultrapura es aquella que proviene de un proceso de purificación, el cual consiste en eliminar los sólidos disueltos del agua, los cuales son los causantes de la dureza del agua.</p>
+        </div>
+    </div>
+</div>
+<div id="modalSanitaria" class="modal" (click)="closeModal($event, 'modalSanitaria')">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal($event, 'modalSanitaria')">&times;</span>
+        <h4><b>Agua Residual Sanitaria</b></h4>
+        <p>El agua residual sanitaria es aquella que proviene de los desechos de los inodoros, lavabos, regaderas, lavadoras, etc. Este tipo de agua es la que se genera en los hogares, oficinas, escuelas, hospitales, etc.</p>
+    </div>
+</div>
+<div id="modalIndustrial" class="modal" (click)="closeModal($event, 'modalIndustrial')">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal($event, 'modalIndustrial')">&times;</span>
+        <h4><b>Agua Residual Industrial</b></h4>
+        <p>El agua residual industrial es aquella que proviene de los procesos industriales, como la industria alimentaria, química, farmacéutica, etc. Este tipo de agua es la que se genera en las industrias, fábricas, etc.</p>
+    </div>
+</div>
+<div id="modalSuavizada" class="modal" (click)="closeModal($event, 'modalSuavizada')">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal($event, 'modalSuavizada')">&times;</span>
+        <h4><b>Agua Suavizada</b></h4>
+        <p>El agua suavizada es aquella que proviene de un proceso de suavización, el cual consiste en eliminar los iones de calcio y magnesio del agua, los cuales son los causantes de la dureza del agua.</p>
+    </div>
+</div>
+<div id="modalOsmosis" class="modal" (click)="closeModal($event, 'modalOsmosis')">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal($event, 'modalOsmosis')">&times;</span>
+        <h4><b>Agua de Ósmosis Inversa</b></h4>
+        <p>El agua de ósmosis inversa es aquella que proviene de un proceso de ósmosis inversa, el cual consiste en eliminar los sólidos disueltos del agua, los cuales son los causantes de la dureza del agua.</p>
+    </div>
+</div>
+<div id="modalUltrapura" class="modal" (click)="closeModal($event, 'modalUltrapura')">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal($event, 'modalUltrapura')">&times;</span>
+        <h4><b>Agua Ultrapura</b></h4>
+        <p>El agua ultrapura es aquella que proviene de un proceso de purificación, el cual consiste en eliminar los sólidos disueltos del agua, los cuales son los causantes de la dureza del agua.</p>
+    </div>
+</div>
