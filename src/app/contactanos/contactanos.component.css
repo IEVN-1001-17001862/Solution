@@ -66,3 +66,28 @@
   button:hover {
     background-color: #45a049;
   }
+
+  .maps-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4285F4; /* Color azul de Google */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  .maps-icon mat-icon {
+    margin-right: 8px;
+  }
+  
+  .maps-icon:hover {
+    background-color: #357ABD;
+  }
+  
+  .google-map {
+    margin: 20px;
+    text-align: center; /* Centrar el iframe si es más pequeño que el contenedor */
+  }
