@@ -17,11 +17,64 @@
                 Used water from homes and businesses containing waste and pollutants, requiring proper treatment and disposal for public health and environmental sustainability.
             </p>
             <div class="mt-4 lg:mt-8">
-                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalIndustrial')">More information</a>
+                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalWastewater')">More information</a>
             </div>
         </div>
     </div>
 </div>
+
+<div id="modalWastewater" class="modal" (click)="closeModal($event, 'modalWastewater')">
+    <div class="modal-content bg-transparent border-0">
+        <div class="my-1">
+            <span class="close" (click)="closeModal($event, 'modalWastewater')">&times;</span>
+            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
+                <h4 class="mb-10 text-center text-lg font-medium text-black"><b>Sanitary Wastewater</b></h4>
+                <h4 class="text-lg font-medium text-black">Our sanitary package wastewater treatment plant (WWTP) projects typically include the design and construction of the following components:</h4>
+            </div>
+            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-orange-100 px-4 py-4 text-black-800 ">
+                <h4>
+                    <ul class="list-disc ml-4">
+                        <li>Lift station</li>
+                        <li>Collection sewer drain lines</li>
+                        <li>Flow Equalization</li>
+                        <li>Primary and Secondary Treatment</li>
+                        <li>Extended Aeration Basin</li>
+                        <li>Sludge Aerobic Digestion and Holding</li>
+                        <li>Sludge Dewatering (drying beds or filter bags)</li>
+                        <li>Disinfection (sodium hypo chlorite chlorination, chloride tablets or chlorine gas)</li>
+                        <li>Tertiary Treatment (automatic dual-media rapid filtering or sand filter beds)</li>
+                        <li>Treated Water Recycling</li>
+                        <li>Storage</li>
+                        <li>Pressurizing</li>
+                        <li>Distribution</li>
+                    
+                    </ul>
+                    <br>
+                    <p>Treatment is generally accomplished with an activated sludge process under an extended aeration format. However, our expertise includes other forms of treatment, including anaerobic or a combination of anaerobic and aerobic treatment.</p>
+                    <p>Water recycling has become a key component in our WWTP projects to permit the reuse of treated water in bathroom toilets and urinals and in landscape irrigation. For manufacturing facilities under 5,000 employees (including all shifts), Solution Idea typically installs prefabricated steel-plate package units. For larger manufacturing plants, we normally build reinforced concrete treatment plants. However, our firm evaluates the specific needs and preferences of each client to customize the best solution for the particular case. For additional information on treatment standards please click the appropriate link for water or wastewater.</p>
+                    <br>
+                    <div class="grid lg:grid-cols-2 gap-3">
+                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                          <figure class="relative w-full h-60">
+                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1670272505340-d906d8d77d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+                          </figure>
+                          <figure class="relative w-full h-60">
+                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1671726203638-83742a2721a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+                          </figure>
+                        </div>
+                        <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                          <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1671726203394-491c8b574a0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80" alt="Image Description">
+                        </figure>
+                      </div>
+                    
+                    
+                </h4>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!--industrial-->
 <div class="px-0 py-6 lg:py-0 w-full">
     <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
         <div class="lg:w-1/2">
@@ -35,23 +88,52 @@
              </h2>
             <p class="mt-2 lg:mt-4 text-gray-600">
 
-                Wastewater from industrial processes, containing pollutants. Proper management and treatment are crucial for environmental compliance.            </p>
-            <div class="mt-4 lg:mt-8">
+Our sanitary package wastewater treatment plant (WWTP) projects typically include the design and construction of the following components:            <div class="mt-4 lg:mt-8">
                 <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalIndustrial')">More information</a>
             </div>
         </div>
     </div>
 </div>
+<div id="modalIndustrial" class="modal" (click)="closeModal($event, 'modalIndustrial')">
+    <div class="modal-content bg-transparent border-0">
+        <div class="my-1">
+            <span class="close" (click)="closeModal($event, 'modalIndustrial')">&times;</span>
+            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
+                <h4 class="mb-10 text-center text-lg font-medium text-black"><b>Industrial Wastewater</b></h4>
+               
+            </div>
+            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-orange-100 px-4 py-4 text-black-800 ">
+                <h4>
+                    <ul class="list-disc ml-4">
+                        <h4 class="text-lg font-medium text-black">Solution Idea has the expertise to design and build process wastewater treatment plants for industrial pretreatment.  These plants include sequential batch reactors (SBR).  Treatment at our SBR plants involves pH adjustment, dissolved air flotation (DAF), coagulation and flocculation.  The latter can be accomplished with the addition of aluminum sulfate and polymers (anionic and cationic) to produce the best effluent quality at the least possible capital and O&M cost.</h4>
+                <h4 class="text-lg font-medium text-black">We have experience in evaluating existing treatment facilities by performing site surveys, inspections and assessments.  Our efforts involve the review of plans, specifications and operational data of the existing treatment facilities in order to formulate, develop and implement a corrective action plan to bring plant effluents into compliance with governmental and clients' requirements.  Our treatment expertise includes both aerobic and anaerobic digestion
+                </h4>
+                    
+                    </ul>
+                    <br>
+                    <div class="grid lg:grid-cols-2 gap-3">
+                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                          <figure class="relative w-full h-60">
+                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1670272505340-d906d8d77d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+                          </figure>
+                          <figure class="relative w-full h-60">
+                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1671726203638-83742a2721a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+                          </figure>
+                        </div>
+                        <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                          <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1671726203394-491c8b574a0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80" alt="Image Description">
+                        </figure>
+                      </div>
+                </h4>
+            </div>
+        </div>
+        
+    </div>
+</div>
 </section>
 
 <!-- Modales -->
-<div id="modalIndustrial" class="modal" (click)="closeModal($event, 'modalIndustrial')">
-    <div class="modal-content">
-        <span class="close" (click)="closeModal($event, 'modalIndustrial')">&times;</span>
-        <h4><b>Agua Residual Industrial</b></h4>
-        <p>El agua residual industrial es aquella que proviene de los procesos industriales, como la industria alimentaria, química, farmacéutica, etc. Este tipo de agua es la que se genera en las industrias, fábricas, etc.</p>
-    </div>
-</div>
+
 
 <section class="my-1 sm:my-2 grid grid-cols-1 lg:grid-cols-2 gap-x-8 p-6">
     <div class="px-0 py-6 lg:py-0 w-full">
@@ -66,11 +148,57 @@
                 Softened water
             </h2>
             <p class="mt-2 lg:mt-4 text-gray-600">
-                Treated water with reduced mineral content, minimizing scale buildup in pipes and appliances for improved efficiency and prolonged system lifespan.            </p>
-            <div class="mt-4 lg:mt-8">
-                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalIndustrial')">More information</a>
+Our sanitary package wastewater treatment plant (WWTP) projects typically include the design and construction of the following components:            <div class="mt-4 lg:mt-8">
+                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalSoftened')">More information</a>
             </div>
         </div>
+    </div>
+</div>
+<div id="modalSoftened" class="modal" (click)="closeModal($event, 'modalSoftened')">
+    <div class="modal-content bg-transparent border-0">
+        <div class="my-1">
+            <span class="close" (click)="closeModal($event, 'modalSoftened')">&times;</span>
+            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
+                <h4 class="mb-10 text-center text-lg font-medium text-black"><b>Softened Water</b></h4>
+               
+            </div>
+            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-orange-100 px-4 py-4 text-black-800 ">
+                <h4>
+                    <ul class="list-disc ml-4">
+                        <h4 class="text-lg font-medium text-black">Solution Idea has deep knowledge in the design and construction of softened water treatment systems, primarily focused on industrial pretreatment applications. Our systems use advanced technologies to guarantee an effective reduction in water hardness, thus improving its quality.</h4>
+                <h4 class="text-lg font-medium text-black">
+                    The core of our facilities lies in the use of ion exchangers and ion exchange resins. These components are responsible for selectively removing calcium and magnesium ions, mainly responsible for the hardness of the water, replacing them with sodium ions.
+                    
+                    <h4>Ion Exchangers: They use resins to exchange calcium and magnesium ions for sodium ions.</h4>
+                    <h4>
+                        <ul class="list-disc ml-4">
+                            <li>Ion Exchange Resins: Specific resins capture hard ions, releasing sodium ions.</li>
+                            <li>Flow Equalization</li>
+                            <li>Reverse Osmosis: Can remove certain minerals and contaminants.</li>
+                        
+                        </ul>
+                    </h4>
+                </h4>
+                    
+                    </ul>
+                    <br>
+                    <div class="grid lg:grid-cols-2 gap-3">
+                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                          <figure class="relative w-full h-60">
+                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1670272505340-d906d8d77d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+                          </figure>
+                          <figure class="relative w-full h-60">
+                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1671726203638-83742a2721a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+                          </figure>
+                        </div>
+                        <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                          <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1671726203394-491c8b574a0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80" alt="Image Description">
+                        </figure>
+                      </div>
+                </h4>
+            </div>
+        </div>
+        
     </div>
 </div>
 
@@ -88,7 +216,7 @@
             <p class="mt-2 lg:mt-4 text-gray-600">
                 Purified water achieved through reverse osmosis filtration, removing impurities for versatile use, from drinking to industrial applications.            </p>
             <div class="mt-4 lg:mt-8">
-                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalIndustrial')">More information</a>
+                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalOsmosis')">More information</a>
             </div>
         </div>
     </div>
@@ -96,11 +224,53 @@
 </section>
 
 <!-- Modales -->
-<div id="modalIndustrial" class="modal" (click)="closeModal($event, 'modalIndustrial')">
-    <div class="modal-content">
-        <span class="close" (click)="closeModal($event, 'modalIndustrial')">&times;</span>
-        <h4><b>Agua Residual Industrial</b></h4>
-        <p>El agua residual industrial es aquella que proviene de los procesos industriales, como la industria alimentaria, química, farmacéutica, etc. Este tipo de agua es la que se genera en las industrias, fábricas, etc.</p>
+<div id="modalOsmosis" class="modal" (click)="closeModal($event, 'modalOsmosis')">
+    <div class="modal-content bg-transparent border-0">
+        <div class="my-1">
+            <span class="close" (click)="closeModal($event, 'modalOsmosis')">&times;</span>
+            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
+                <h4 class="mb-10 text-center text-lg font-medium text-black"><b>Reverse Osmosis Water</b></h4>
+               
+            </div>
+            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-orange-100 px-4 py-4 text-black-800 ">
+                <h4>
+                    <ul class="list-disc ml-4">
+                        <h4 class="text-lg font-medium text-black">Reverse osmosis (RO) is an advanced water treatment process that relies on the use of a semipermeable membrane to purify water by removing impurities and contaminants. Here's a technical explanation of how it works and some key applications:</h4>
+                    
+                    <h4>Operation parameters:</h4>
+                    <h4>
+                        <ul class="list-disc ml-4">
+                            <li>Operating Pressure</li>                         
+                            <li>Recovery Rate</li>
+                            <li>Relación Agua de Rechazo/Agua Tratada</li>                        
+                        </ul>
+                    </h4>
+                    
+                    </ul>
+                    <h4 class="text-lg font-medium text-black">Remineralization Considerations:</h4>
+                    <h4 class="text-lg font-medium text-black">
+                        Reverse osmosis can remove beneficial minerals from water along with contaminants. In some cases, a remineralization step is added to improve flavor and provide some essential minerals.
+                    </h4>
+
+
+                    <br>
+                    <div class="grid lg:grid-cols-2 gap-3">
+                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                          <figure class="relative w-full h-60">
+                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1670272505340-d906d8d77d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+                          </figure>
+                          <figure class="relative w-full h-60">
+                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1671726203638-83742a2721a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+                          </figure>
+                        </div>
+                        <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                          <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1671726203394-491c8b574a0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80" alt="Image Description">
+                        </figure>
+                      </div>
+                </h4>
+            </div>
+        </div>
+        
     </div>
 </div>
 
@@ -119,9 +289,10 @@
                 Ultrapure Water         
                </h2>
             <p class="mt-2 lg:mt-4 text-gray-600">
-                Exceptionally purified water with minimal contaminants, crucial for precision in industries like electronics and pharmaceuticals.            </p>
+                Exceptionally purified water with minimal contaminants, crucial for precision in industries like electronics and pharmaceuticals.         
+               </p>
             <div class="mt-4 lg:mt-8">
-                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalIndustrial')">More information</a>
+                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalUltrapura')">More information</a>
             </div>
         </div>
     </div>
@@ -130,11 +301,45 @@
 </section>
 
 <!-- Modales -->
-<div id="modalIndustrial" class="modal" (click)="closeModal($event, 'modalIndustrial')">
-    <div class="modal-content">
-        <span class="close" (click)="closeModal($event, 'modalIndustrial')">&times;</span>
-        <h4><b>Agua Residual Industrial</b></h4>
-        <p>El agua residual industrial es aquella que proviene de los procesos industriales, como la industria alimentaria, química, farmacéutica, etc. Este tipo de agua es la que se genera en las industrias, fábricas, etc.</p>
+<div id="modalUltrapura" class="modal" (click)="closeModal($event, 'modalUltrapura')">
+    <div class="modal-content bg-transparent border-0">
+        <div class="my-1">
+            <span class="close" (click)="closeModal($event, 'modalUltrapura')">&times;</span>
+            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
+                <h4 class="mb-10 text-center text-lg font-medium text-black"><b>Ultrapure Water</b></h4>
+               
+            </div>
+            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-orange-100 px-4 py-4 text-black-800 ">
+                <h4>
+                    <ul class="list-disc ml-4">
+                        <h4 class="text-lg font-medium text-black">
+                            The term "ultrapure water" refers to a type of water that has undergone rigorous purification processes to achieve extremely high levels of purity. This type of water is used in industries where the presence of impurities could significantly affect processes and products.</h4>
+                    
+                    <h4>The production of ultrapure water involves the combination of multiple processes to ensure exceptionally high quality, and its application is crucial in various areas where water purity is essential.</h4>
+                  
+                    
+                    </ul>
+                  
+
+
+                    <br>
+                    <div class="grid lg:grid-cols-2 gap-3">
+                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                          <figure class="relative w-full h-60">
+                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1670272505340-d906d8d77d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+                          </figure>
+                          <figure class="relative w-full h-60">
+                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1671726203638-83742a2721a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+                          </figure>
+                        </div>
+                        <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                          <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1671726203394-491c8b574a0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80" alt="Image Description">
+                        </figure>
+                      </div>
+                </h4>
+            </div>
+        </div>
+        
     </div>
 </div>
 <br>

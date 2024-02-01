@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
     'assets/3.png',
     'assets/12344.png',
 
+
     // ... más imágenes si es necesario
   ];
   images2 = [

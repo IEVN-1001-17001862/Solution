@@ -6,9 +6,15 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  @ViewChild('slider', { static: true }) slider!: ElementRef;
+  @ViewChild('changingImage', { static: true }) changingImage!: ElementRef;
 
-  defaultTransform = 0;
+  imageUrls = [
+    "assets/2.png",
+    "assets/3.png",
+    // Add more image URLs as needed
+  ];
+
+  currentIndex = 0;
 
   constructor() {
     // Inicializa slider aquí si es necesario
@@ -16,26 +22,15 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     // Lógica de inicialización, si es necesario
+    // Cambia la imagen cada 2 segundos (2000 milisegundos)
+    setInterval(() => this.changeImage(), 2000);
   }
 
-  goNext() {
-    this.defaultTransform -= 398;
-    this.transformSlider();
-  }
-
-  goPrev() {
-    this.defaultTransform += 398;
-    this.transformSlider();
-  }
-
-  private transformSlider() {
-    const slider = this.slider.nativeElement;
-
-    if (Math.abs(this.defaultTransform) >= slider.scrollWidth / 1.7) {
-      this.defaultTransform = 0;
-    }
-
-    slider.style.transform = `translateX(${this.defaultTransform}px)`;
+  changeImage() {
+    // Incrementa el índice o reinicia a 0 si llega al final
+    this.currentIndex = (this.currentIndex + 1) % this.imageUrls.length;
+    // Establece la nueva URL de la imagen
+    this.changingImage.nativeElement.src = this.imageUrls[this.currentIndex];
   }
 }
 
