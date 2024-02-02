@@ -9,8 +9,18 @@ export class AboutComponent implements OnInit {
   @ViewChild('changingImage', { static: true }) changingImage!: ElementRef;
 
   imageUrls = [
-    "assets/2.png",
-    "assets/3.png",
+    "assets/agua4.jpeg",
+    "assets/agua3.jpeg",
+    "assets/agua5.jpeg",
+    "assets/industriall.jpeg",
+    "assets/1222.jpeg",
+    "assets/about.jpeg",
+
+
+    
+    
+
+   
     // Add more image URLs as needed
   ];
 

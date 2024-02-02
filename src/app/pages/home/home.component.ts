@@ -20,6 +20,8 @@ export class HomeComponent implements OnInit {
     'assets/2.png',
     'assets/3.png',
     'assets/12344.png',
+    'assets/solutionnidea.png',
+
 
 
     // ... más imágenes si es necesario
