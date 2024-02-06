@@ -1,6 +1,5 @@
-// navbar.component.ts
-
 import { Component, OnInit } from '@angular/core';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  idiomaActual = 'en';
 
+  constructor(private translocoService: TranslocoService) {
+    console.log(this.translocoService.translate('hello'));
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // Establecer el idioma inicial
+    this.translocoService.setActiveLang(this.idiomaActual);
+  }
 
-
+  cambiarIdioma() {
+    this.idiomaActual = this.idiomaActual === 'en' ? 'es' : 'en';
+    this.translocoService.setActiveLang(this.idiomaActual);
+  }
 }

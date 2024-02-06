@@ -29,19 +29,23 @@
           <div class="flex space-x-4">
         
         
-            <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium" [routerLink]="['about']" routerLinkActive="active-link">about</a>
-            <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium" [routerLink]="['contactanos']" routerLinkActive="active-link">Contact</a>
+            <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium" [routerLink]="['about']" routerLinkActive="active-link">{{ 'about' | transloco }}</a>
+<a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium" [routerLink]="['contactanos']" routerLinkActive="active-link">{{ 'contact' | transloco }}</a>
+
           </div>
           
         </div>
         
         <div class="flex flex-shrink-0 items-center ml-12">
-          <a [routerLink]="['/']"> <!-- Enlaza al componente o ruta principal -->
+          <a [routerLink]="['/']"> 
               <img class="h-20 w-auto" src="assets/solution.png" alt="Your Company">
           </a>
       </div>
+      <button (click)="cambiarIdioma()">Cambiar Idioma</button>
+
       
-       
+      
+      
       </div>
     
     </div>

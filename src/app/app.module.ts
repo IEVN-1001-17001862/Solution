@@ -14,16 +14,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { ContactanosComponent } from './contactanos/contactanos.component';
-import {FormsModule } from '@angular/forms';
-import {ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { TranslocoModule, TRANSLOCO_CONFIG } from '@ngneat/transloco';
-import { TranslationService } from './translation.service';
-
-
-
+import { TranslocoModule } from '@ngneat/transloco';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -48,17 +45,11 @@ import { TranslationService } from './translation.service';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    TranslocoModule
+    TranslocoModule,
+    HttpClientModule,
+    TranslocoRootModule 
   ],
   providers: [
-     {
-      provide: TRANSLOCO_CONFIG,
-      useValue: {
-        availableLangs: ['en', 'es'],
-        defaultLang: 'en',
-        reRenderOnLangChange: true,
-      },
-    },TranslationService
   ],
   bootstrap: [AppComponent]
 })
