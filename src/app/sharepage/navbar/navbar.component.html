@@ -28,7 +28,17 @@
         <div class="hidden sm:ml-6 sm:block mt-4">
           <div class="flex space-x-4">
         
-        
+            <button (click)="cambiarIdioma()" class="flex items-center">
+              <img [src]="banderaUrl" alt="Bandera" class="w-6 h-6 mr-2">
+            </button>
+            
+            
+            
+            
+            
+            
+            
+            
             <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium" [routerLink]="['about']" routerLinkActive="active-link">{{ 'about' | transloco }}</a>
 <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium" [routerLink]="['contactanos']" routerLinkActive="active-link">{{ 'contact' | transloco }}</a>
 
@@ -41,7 +51,6 @@
               <img class="h-20 w-auto" src="assets/solution.png" alt="Your Company">
           </a>
       </div>
-      <button (click)="cambiarIdioma()">Cambiar Idioma</button>
 
       
       

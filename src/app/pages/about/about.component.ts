@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -15,32 +15,29 @@ export class AboutComponent implements OnInit {
     "assets/industriall.jpeg",
     "assets/1222.jpeg",
     "assets/about.jpeg",
-
-
-    
-    
-
-   
     // Add more image URLs as needed
   ];
 
   currentIndex = 0;
+  mostrarBoton = false;
 
-  constructor() {
-    // Inicializa slider aquí si es necesario
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    // Lógica de inicialización, si es necesario
-    // Cambia la imagen cada 2 segundos (2000 milisegundos)
     setInterval(() => this.changeImage(), 2000);
   }
 
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.mostrarBoton = window.pageYOffset > 200;
+  }
+
   changeImage() {
-    // Incrementa el índice o reinicia a 0 si llega al final
     this.currentIndex = (this.currentIndex + 1) % this.imageUrls.length;
-    // Establece la nueva URL de la imagen
     this.changingImage.nativeElement.src = this.imageUrls[this.currentIndex];
   }
-}
 
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}

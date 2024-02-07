@@ -21,9 +21,6 @@ export class HomeComponent implements OnInit {
     'assets/3.png',
     'assets/12344.png',
     'assets/solutionnidea.png',
-
-
-
     // ... más imágenes si es necesario
   ];
   images2 = [
@@ -33,6 +30,7 @@ export class HomeComponent implements OnInit {
     // ... más imágenes
   ];
   activeSlide = 0;
+  mostrarBoton: boolean = false;
 
   constructor() {}
 
@@ -62,7 +60,12 @@ export class HomeComponent implements OnInit {
         }
       }
     });
-  }
-  
 
+    this.mostrarBoton = scrollPosition > 200; // Ajusta el valor según tus necesidades
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
+

@@ -8,18 +8,23 @@ import { TranslocoService } from '@ngneat/transloco';
 })
 export class NavbarComponent implements OnInit {
   idiomaActual = 'en';
+  banderaUrl: string = '/assets/usa.png';  // Asegúrate de proporcionar la ruta correcta a tu imagen
 
   constructor(private translocoService: TranslocoService) {
     console.log(this.translocoService.translate('hello'));
   }
 
   ngOnInit(): void {
-    // Establecer el idioma inicial
     this.translocoService.setActiveLang(this.idiomaActual);
   }
 
   cambiarIdioma() {
     this.idiomaActual = this.idiomaActual === 'en' ? 'es' : 'en';
     this.translocoService.setActiveLang(this.idiomaActual);
+    this.actualizarBandera();
+  }
+
+  private actualizarBandera(): void {
+    this.banderaUrl = this.idiomaActual === 'en' ? '/assets/usa.png' : '/assets/bandera.png';
   }
 }
