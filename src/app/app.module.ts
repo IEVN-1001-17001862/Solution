@@ -22,6 +22,7 @@ import { TranslocoModule } from '@ngneat/transloco';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,9 +48,11 @@ import { TranslocoRootModule } from './transloco-root.module';
     MatSelectModule,
     TranslocoModule,
     HttpClientModule,
-    TranslocoRootModule 
+    TranslocoRootModule,
+    
   ],
   providers: [
+
   ],
   bootstrap: [AppComponent]
 })
