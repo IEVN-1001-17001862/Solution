@@ -38,10 +38,26 @@
             
             
             
+            <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium relative overflow-hidden group" [routerLink]="['about']" routerLinkActive="active-link">
+              <span class="relative z-1">
+                {{ 'about' | transloco }}
+              </span>
+              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0 transition-transform group-hover:scale-x-100"></span>
+            </a>
+            <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium relative overflow-hidden group" [routerLink]="['menu']" routerLinkActive="active-link">
+              <span class="relative z-1">
+                {{ 'Our Technologies' | transloco }}
+              </span>
+              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0 transition-transform group-hover:scale-x-100"></span>
+            </a>
             
-            <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium" [routerLink]="['about']" routerLinkActive="active-link">{{ 'about' | transloco }}</a>
-<a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium" [routerLink]="['contactanos']" routerLinkActive="active-link">{{ 'contact' | transloco }}</a>
-
+            <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium relative overflow-hidden group" [routerLink]="['contactanos']" routerLinkActive="active-link">
+              <span class="relative z-1">
+                {{ 'Contact' | transloco }}
+              </span>
+              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0 transition-transform group-hover:scale-x-100"></span>
+            </a>
+            
           </div>
           
         </div>
