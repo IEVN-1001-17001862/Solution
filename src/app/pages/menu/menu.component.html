@@ -1,394 +1,397 @@
 <br>
 <br>
-<p class="text-center mt-4 text-3xl font-bold text-gray-600 font-bold text-center sm:text-4xl">
-    {{ 'tec1' | transloco }}
-
-  </p>
-<section class="my-1 sm:my-2 grid grid-cols-1 lg:grid-cols-2 gap-x-8 p-6">
-    <div class="px-0 py-6 lg:py-0 w-full">
-    <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
-        <div class="lg:w-1/2">
-            <div class="lg:scale-110 h-40 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
-     style="background-image: url('assets/sanitaryWater.png');">
-</div>
-        </div>
-        <div class="py-8 px-4 lg:px-8 max-w-md lg:max-w-2xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
-            <h2 class="text-xl lg:text-3xl text-gray-800 font-bold">
-                {{ 'tec2' | transloco }}
-                
-            </h2>
-            <p class="mt-2 lg:mt-4 text-gray-600">
-                {{ 'tec3' | transloco }}
-                
-            </p>
-            <div class="mt-4 lg:mt-8">
-                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalWastewater')">{{ 'inf4' | transloco }}</a>
+<div [@fadeInLeft]="state">
+    <p class="text-center mt-4 text-3xl font-bold text-gray-600 font-bold text-center sm:text-4xl">
+        {{ 'tec1' | transloco }}
+    
+      </p>
+    <section class="my-1 sm:my-2 grid grid-cols-1 lg:grid-cols-2 gap-x-8 p-6">
+        <div class="px-0 py-6 lg:py-0 w-full">
+        <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
+            <div class="lg:w-1/2">
+                <div class="lg:scale-110 h-40 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
+         style="background-image: url('assets/sanitaryWater.png');">
+    </div>
+            </div>
+            <div class="py-8 px-4 lg:px-8 max-w-md lg:max-w-2xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
+                <h2 class="text-xl lg:text-3xl text-gray-800 font-bold">
+                    {{ 'tec2' | transloco }}
+                    
+                </h2>
+                <p class="mt-2 lg:mt-4 text-gray-600">
+                    {{ 'tec3' | transloco }}
+                    
+                </p>
+                <div class="mt-4 lg:mt-8">
+                    <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalWastewater')">{{ 'inf4' | transloco }}</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<div id="modalWastewater" class="modal" (click)="closeModal($event, 'modalWastewater')">
-    <div class="modal-content bg-transparent border-0">
-        <div class="my-1">
-            <span class="close" (click)="closeModal($event, 'modalWastewater')">&times;</span>
-            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-orange-600/30 px-4 py-2 text-gray-100">
-                <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
-                    {{ 'tec4' | transloco }}
-                    
-                </b></h4>
-                
-             
-            </div>
-            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-white-600/30 bg-white px-4 py-4 text-black-800 ">
-                <h4>
-                 
-                    <br>
-                    <h4 class="text-lg font-medium text-black">
-                        {{ 'tec5' | transloco }}
-                    
-                    </h4>
-                    <h4>
-                        {{ 'tec6' | transloco }}
+    
+    <div id="modalWastewater" class="modal" (click)="closeModal($event, 'modalWastewater')">
+        <div class="modal-content bg-transparent border-0">
+            <div class="my-1">
+                <span class="close" (click)="closeModal($event, 'modalWastewater')">&times;</span>
+                <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-orange-600/30 px-4 py-2 text-gray-100">
+                    <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
+                        {{ 'tec4' | transloco }}
                         
-    
-    
-                    </h4>
-                    {{ 'tec7' | transloco }}
-                    
-                    <h4>
-
-                    </h4>
-                    <br>
-                    <div class="grid lg:grid-cols-2 gap-3">
-                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
-                          <figure class="relative w-full h-60">
-                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapuraa.jpeg" alt="Image Description">
-                          </figure>
-                          <figure class="relative w-full h-60">
-                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura1.jpeg" alt="Image Description">
-                          </figure>
-                        </div>
-                        <figure class="relative w-full h-72 sm:h-96 lg:h-full">
-                          <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura2.jpeg" alt="Image Description">
-                        </figure>
-                      </div>
-                    
-                    
-                </h4>
-            </div>
-        </div>
-        
-    </div>
-</div>
-<!--industrial-->
-<div class="px-0 py-6 lg:py-0 w-full">
-    <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
-        <div class="lg:w-1/2">
-            <div class="lg:scale-110 h-40 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
-                style="background-image:url('assets/sanitaryIndustrial.png')">
-            </div>
-        </div>
-        <div class="py-8 px-4 lg:px-8 max-w-md lg:max-w-2xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
-            <h2 class="text-xl lg:text-3xl text-gray-800 font-bold">
-                {{ 'tec8' | transloco }}
-                           
-             </h2>
-            <p class="mt-2 lg:mt-4 text-gray-600">
-                {{ 'tec9' | transloco }}
-            <div class="mt-4 lg:mt-8">
-                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalIndustrial')">{{ 'inf3' | transloco }}</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="modalIndustrial" class="modal" (click)="closeModal($event, 'modalIndustrial')">
-    <div class="modal-content bg-transparent border-0">
-        <div class="my-1">
-            <span class="close" (click)="closeModal($event, 'modalIndustrial')">&times;</span>
-            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-orange-600/30 px-4 py-2 text-gray-100">
-                <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
-                    {{ 'tec10' | transloco }}
-                    
-                </b></h4>
-               
-            </div>
-            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-white px-4 py-4 text-black-800 ">
-                <h4>
-                    <ul class="list-disc ml-4">
-                        <h4 class="text-lg font-medium text-black">
-                            {{ 'tec11' | transloco }}
-
-                            </h4>
-                <h4 class="text-lg font-medium text-black">
-                    {{ 'tec12' | transloco }}
-                    
-                </h4>
-                    
-                    </ul>
-                    <br>
-                    <div class="grid lg:grid-cols-2 gap-3">
-                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
-                          <figure class="relative w-full h-60">
-                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/industrial.jpeg" alt="Image Description">
-                          </figure>
-                          <figure class="relative w-full h-60">
-                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/industriall.jpeg" alt="Image Description">
-                          </figure>
-                        </div>
-                        <figure class="relative w-full h-72 sm:h-96 lg:h-full">
-                          <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/industrial2.jpeg" alt="Image Description">
-                        </figure>
-                      </div>
-                </h4>
-            </div>
-        </div>
-        
-    </div>
-</div>
-</section>
-
-<!-- Modales -->
-
-
-<section class="my-1 sm:my-2 grid grid-cols-1 lg:grid-cols-2 gap-x-8 p-6">
-    <div class="px-0 py-6 lg:py-0 w-full">
-    <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
-        <div class="lg:w-1/2">
-            <div class="lg:scale-110 h-40 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
-                style="background-image:url('assets/suavizada.png')">
-            </div>
-        </div>
-        <div class="py-8 px-4 lg:px-8 max-w-md lg:max-w-2xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
-            <h2 class="text-xl lg:text-3xl text-gray-800 font-bold">
-                {{ 'tec13' | transloco }}
-            </h2>
-            <p class="mt-2 lg:mt-4 text-gray-600">
-                {{ 'tec14' | transloco }}
-            
-<div class="mt-4 lg:mt-8">
-                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalSoftened')">{{ 'inf2' | transloco }}</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="modalSoftened" class="modal" (click)="closeModal($event, 'modalSoftened')">
-    <div class="modal-content bg-transparent border-0">
-        <div class="my-1">
-            <span class="close" (click)="closeModal($event, 'modalSoftened')">&times;</span>
-            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
-                <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
-                    {{ 'tec15' | transloco }}
                     </b></h4>
-               
-            </div>
-            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-white px-4 py-4 text-black-800 ">
-                <h4>
-                    <ul class="list-disc ml-4">
-                        <h4 class="text-lg font-medium text-black">
-                            {{ 'tec16' | transloco }}
-                        </h4>
-                <h4 class="text-lg font-medium text-black">
-                    {{ 'tec17' | transloco }}
-
-                    <h4>
-                        {{ 'tec18' | transloco }}
-                        
-                    </h4>
-                    <h4>
-                        <ul class="list-disc ml-4">
-                            <li>
-                                {{ 'tec19' | transloco }}
-                                
-                            </li>
-                            <li>
-                                {{ 'tec20' | transloco }}
-                                
-                            </li>
-                        
-                        </ul>
-                    </h4>
-                </h4>
                     
-                    </ul>
-                    <br>
-                    <div class="grid lg:grid-cols-2 gap-3">
-                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
-                          <figure class="relative w-full h-60">
-                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/softened.jpeg" alt="Image Description">
-                          </figure>
-                          <figure class="relative w-full h-60">
-                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/suave2.jpeg" alt="Image Description">
-                          </figure>
-                        </div>
-                        <figure class="relative w-full h-72 sm:h-96 lg:h-full">
-                          <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/suave.jpeg" alt="Image Description">
-                        </figure>
-                      </div>
-                </h4>
-            </div>
-        </div>
+                 
+                </div>
+                <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-white-600/30 bg-white px-4 py-4 text-black-800 ">
+                    <h4>
+                     
+                        <br>
+                        <h4 class="text-lg font-medium text-black">
+                            {{ 'tec5' | transloco }}
+                        
+                        </h4>
+                        <h4>
+                            {{ 'tec6' | transloco }}
+                            
         
-    </div>
-</div>
-
-<div class="px-0 py-6 lg:py-0 w-full">
-    <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
-        <div class="lg:w-1/2">
-            <div class="lg:scale-110 h-40 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
-                style="background-image:url('assets/inversa.jpeg')">
+        
+                        </h4>
+                        {{ 'tec7' | transloco }}
+                        
+                        <h4>
+    
+                        </h4>
+                        <br>
+                        <div class="grid lg:grid-cols-2 gap-3">
+                            <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                              <figure class="relative w-full h-60">
+                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapuraa.jpeg" alt="Image Description">
+                              </figure>
+                              <figure class="relative w-full h-60">
+                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura1.jpeg" alt="Image Description">
+                              </figure>
+                            </div>
+                            <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                              <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura2.jpeg" alt="Image Description">
+                            </figure>
+                          </div>
+                        
+                        
+                    </h4>
+                </div>
             </div>
-        </div>
-        <div class="py-8 px-4 lg:px-8 max-w-md lg:max-w-2xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
-            <h2 class="text-xl lg:text-3xl text-gray-800 font-bold">
-                {{ 'tec21' | transloco }}
-                
-            </h2>
-            <p class="mt-2 lg:mt-4 text-gray-600">
-                {{ 'tec22' | transloco }}
-                
             
-            </p>
-            <div class="mt-4 lg:mt-8">
-                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalOsmosis')">{{ 'inf1' | transloco }}</a>
+        </div>
+    </div>
+    <!--industrial-->
+    <div class="px-0 py-6 lg:py-0 w-full">
+        <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
+            <div class="lg:w-1/2">
+                <div class="lg:scale-110 h-40 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
+                    style="background-image:url('assets/sanitaryIndustrial.png')">
+                </div>
+            </div>
+            <div class="py-8 px-4 lg:px-8 max-w-md lg:max-w-2xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
+                <h2 class="text-xl lg:text-3xl text-gray-800 font-bold">
+                    {{ 'tec8' | transloco }}
+                               
+                 </h2>
+                <p class="mt-2 lg:mt-4 text-gray-600">
+                    {{ 'tec9' | transloco }}
+                <div class="mt-4 lg:mt-8">
+                    <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalIndustrial')">{{ 'inf3' | transloco }}</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</section>
-
-<!-- Modales -->
-<div id="modalOsmosis" class="modal" (click)="closeModal($event, 'modalOsmosis')">
-    <div class="modal-content bg-transparent border-0">
-        <div class="my-1">
-            <span class="close" (click)="closeModal($event, 'modalOsmosis')">&times;</span>
-            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
-                <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
-                    {{ 'tec23' | transloco }}
+    <div id="modalIndustrial" class="modal" (click)="closeModal($event, 'modalIndustrial')">
+        <div class="modal-content bg-transparent border-0">
+            <div class="my-1">
+                <span class="close" (click)="closeModal($event, 'modalIndustrial')">&times;</span>
+                <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-orange-600/30 px-4 py-2 text-gray-100">
+                    <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
+                        {{ 'tec10' | transloco }}
+                        
+                    </b></h4>
                    
-                </b></h4>
-               
-            </div>
-            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-white px-4 py-4 text-black-800 ">
-                <h4>
-                    <ul class="list-disc ml-4">
-                        <h4 class="text-lg font-medium text-black">
-                       {{ 'tec24' | transloco }}
-                    </h4>
-                    
-                    <h4>{{ 'tec25' | transloco }}</h4>
+                </div>
+                <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-white px-4 py-4 text-black-800 ">
                     <h4>
                         <ul class="list-disc ml-4">
-                            <li>{{ 'tec26' | transloco }}</li>                         
-                            <li>{{ 'tec27' | transloco }}</li>
-                            <li>{{ 'tec28' | transloco }}</li>                        
-                        </ul>
-                    </h4>
-                    
-                    </ul>
+                            <h4 class="text-lg font-medium text-black">
+                                {{ 'tec11' | transloco }}
+    
+                                </h4>
                     <h4 class="text-lg font-medium text-black">
-                        {{ 'tec29' | transloco }}
+                        {{ 'tec12' | transloco }}
                         
                     </h4>
-                    <h4 class="text-lg font-medium text-black">
-                        {{ 'tec30' | transloco }}
+                        
+                        </ul>
+                        <br>
+                        <div class="grid lg:grid-cols-2 gap-3">
+                            <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                              <figure class="relative w-full h-60">
+                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/industrial.jpeg" alt="Image Description">
+                              </figure>
+                              <figure class="relative w-full h-60">
+                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/industriall.jpeg" alt="Image Description">
+                              </figure>
+                            </div>
+                            <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                              <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/industrial2.jpeg" alt="Image Description">
+                            </figure>
+                          </div>
                     </h4>
-
-
-                    <br>
-                    <div class="grid lg:grid-cols-2 gap-3">
-                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
-                          <figure class="relative w-full h-60">
-                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/osmosisss.jpeg" alt="Image Description">
-                          </figure>
-                          <figure class="relative w-full h-60">
-                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/osmosis1.jpeg" alt="Image Description">
-                          </figure>
-                        </div>
-                        <figure class="relative w-full h-72 sm:h-96 lg:h-full">
-                          <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/osmosis2.jpeg" alt="Image Description">
-                        </figure>
-                      </div>
-                </h4>
+                </div>
             </div>
+            
         </div>
-        
     </div>
-</div>
-
-<br>
-<br>
-<section class="my-1 sm:my-2 grid grid-cols-1 lg:grid-cols-2 gap-x-8 p-6">
-    <div class="px-0 py-6 lg:py-0 w-full">
-    <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
-        <div class="lg:w-1/2">
-            <div class="lg:scale-110 h-40 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
-            style="background-image: url('assets/ultrapura.png');">
-       </div>
-        </div>
-        <div class="py-8 px-4 lg:px-8 max-w-md lg:max-w-2xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
-            <h2 class="text-xl lg:text-3xl text-gray-800 font-bold">
-                {{ 'tec31' | transloco }}
-                       
-               </h2>
-            <p class="mt-2 lg:mt-4 text-gray-600">
-                {{ 'tec32' | transloco }}
-               
-               </p>
-            <div class="mt-4 lg:mt-8">
-                <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalUltrapura')">{{ 'inf' | transloco }}</a>
+    </section>
+    
+    <!-- Modales -->
+    
+    
+    <section class="my-1 sm:my-2 grid grid-cols-1 lg:grid-cols-2 gap-x-8 p-6">
+        <div class="px-0 py-6 lg:py-0 w-full">
+        <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
+            <div class="lg:w-1/2">
+                <div class="lg:scale-110 h-40 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
+                    style="background-image:url('assets/suavizada.png')">
+                </div>
+            </div>
+            <div class="py-8 px-4 lg:px-8 max-w-md lg:max-w-2xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
+                <h2 class="text-xl lg:text-3xl text-gray-800 font-bold">
+                    {{ 'tec13' | transloco }}
+                </h2>
+                <p class="mt-2 lg:mt-4 text-gray-600">
+                    {{ 'tec14' | transloco }}
+                
+    <div class="mt-4 lg:mt-8">
+                    <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalSoftened')">{{ 'inf2' | transloco }}</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-</section>
-
-<!-- Modales -->
-<div id="modalUltrapura" class="modal" (click)="closeModal($event, 'modalUltrapura')">
-    <div class="modal-content bg-transparent border-0">
-        <div class="my-1">
-            <span class="close" (click)="closeModal($event, 'modalUltrapura')">&times;</span>
-            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
-                <h4 class="mb-10 text-center text-lg font-medium text-black"><b>{{ 'tec33' | transloco }}</b></h4>
-               
-            </div>
-            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-white px-4 py-4 text-black-800 ">
-                <h4>
-                    <ul class="list-disc ml-4">
-                        <h4 class="text-lg font-medium text-black">
-                            {{ 'tec34' | transloco }}
-                        </h4>
-                    
+    <div id="modalSoftened" class="modal" (click)="closeModal($event, 'modalSoftened')">
+        <div class="modal-content bg-transparent border-0">
+            <div class="my-1">
+                <span class="close" (click)="closeModal($event, 'modalSoftened')">&times;</span>
+                <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
+                    <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
+                        {{ 'tec15' | transloco }}
+                        </b></h4>
+                   
+                </div>
+                <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-white px-4 py-4 text-black-800 ">
                     <h4>
-                        {{ 'tec35' | transloco }}
+                        <ul class="list-disc ml-4">
+                            <h4 class="text-lg font-medium text-black">
+                                {{ 'tec16' | transloco }}
+                            </h4>
+                    <h4 class="text-lg font-medium text-black">
+                        {{ 'tec17' | transloco }}
+    
+                        <h4>
+                            {{ 'tec18' | transloco }}
+                            
+                        </h4>
+                        <h4>
+                            <ul class="list-disc ml-4">
+                                <li>
+                                    {{ 'tec19' | transloco }}
+                                    
+                                </li>
+                                <li>
+                                    {{ 'tec20' | transloco }}
+                                    
+                                </li>
+                            
+                            </ul>
+                        </h4>
                     </h4>
-                  
+                        
+                        </ul>
+                        <br>
+                        <div class="grid lg:grid-cols-2 gap-3">
+                            <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                              <figure class="relative w-full h-60">
+                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/softened.jpeg" alt="Image Description">
+                              </figure>
+                              <figure class="relative w-full h-60">
+                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/suave2.jpeg" alt="Image Description">
+                              </figure>
+                            </div>
+                            <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                              <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/suave.jpeg" alt="Image Description">
+                            </figure>
+                          </div>
+                    </h4>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="px-0 py-6 lg:py-0 w-full">
+        <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
+            <div class="lg:w-1/2">
+                <div class="lg:scale-110 h-40 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
+                    style="background-image:url('assets/inversa.jpeg')">
+                </div>
+            </div>
+            <div class="py-8 px-4 lg:px-8 max-w-md lg:max-w-2xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
+                <h2 class="text-xl lg:text-3xl text-gray-800 font-bold">
+                    {{ 'tec21' | transloco }}
                     
-                    </ul>
-                  
-
-
-                    <br>
-                    <div class="grid lg:grid-cols-2 gap-3">
-                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
-                          <figure class="relative w-full h-60">
-                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapuraa.jpeg" alt="Image Description">
-                          </figure>
-                          <figure class="relative w-full h-60">
-                            <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura1.jpeg" alt="Image Description">
-                          </figure>
-                        </div>
-                        <figure class="relative w-full h-72 sm:h-96 lg:h-full">
-                          <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura2.jpeg" alt="Image Description">
-                        </figure>
-                      </div>
-                </h4>
+                </h2>
+                <p class="mt-2 lg:mt-4 text-gray-600">
+                    {{ 'tec22' | transloco }}
+                    
+                
+                </p>
+                <div class="mt-4 lg:mt-8">
+                    <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalOsmosis')">{{ 'inf1' | transloco }}</a>
+                </div>
             </div>
         </div>
-        
+    </div>
+    </section>
+    
+    <!-- Modales -->
+    <div id="modalOsmosis" class="modal" (click)="closeModal($event, 'modalOsmosis')">
+        <div class="modal-content bg-transparent border-0">
+            <div class="my-1">
+                <span class="close" (click)="closeModal($event, 'modalOsmosis')">&times;</span>
+                <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
+                    <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
+                        {{ 'tec23' | transloco }}
+                       
+                    </b></h4>
+                   
+                </div>
+                <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-white px-4 py-4 text-black-800 ">
+                    <h4>
+                        <ul class="list-disc ml-4">
+                            <h4 class="text-lg font-medium text-black">
+                           {{ 'tec24' | transloco }}
+                        </h4>
+                        
+                        <h4>{{ 'tec25' | transloco }}</h4>
+                        <h4>
+                            <ul class="list-disc ml-4">
+                                <li>{{ 'tec26' | transloco }}</li>                         
+                                <li>{{ 'tec27' | transloco }}</li>
+                                <li>{{ 'tec28' | transloco }}</li>                        
+                            </ul>
+                        </h4>
+                        
+                        </ul>
+                        <h4 class="text-lg font-medium text-black">
+                            {{ 'tec29' | transloco }}
+                            
+                        </h4>
+                        <h4 class="text-lg font-medium text-black">
+                            {{ 'tec30' | transloco }}
+                        </h4>
+    
+    
+                        <br>
+                        <div class="grid lg:grid-cols-2 gap-3">
+                            <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                              <figure class="relative w-full h-60">
+                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/osmosisss.jpeg" alt="Image Description">
+                              </figure>
+                              <figure class="relative w-full h-60">
+                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/osmosis1.jpeg" alt="Image Description">
+                              </figure>
+                            </div>
+                            <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                              <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/osmosis2.jpeg" alt="Image Description">
+                            </figure>
+                          </div>
+                    </h4>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <section class="my-1 sm:my-2 grid grid-cols-1 lg:grid-cols-2 gap-x-8 p-6">
+        <div class="px-0 py-6 lg:py-0 w-full">
+        <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
+            <div class="lg:w-1/2">
+                <div class="lg:scale-110 h-40 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
+                style="background-image: url('assets/ultrapura.png');">
+           </div>
+            </div>
+            <div class="py-8 px-4 lg:px-8 max-w-md lg:max-w-2xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
+                <h2 class="text-xl lg:text-3xl text-gray-800 font-bold">
+                    {{ 'tec31' | transloco }}
+                           
+                   </h2>
+                <p class="mt-2 lg:mt-4 text-gray-600">
+                    {{ 'tec32' | transloco }}
+                   
+                   </p>
+                <div class="mt-4 lg:mt-8">
+                    <a href="#" class="bg-orange-300 hover:bg-orange-400 text-dark px-4 lg:px-5 py-2 lg:py-3 font-semibold rounded" (click)="openModal($event, 'modalUltrapura')">{{ 'inf' | transloco }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </section>
+    
+    <!-- Modales -->
+    <div id="modalUltrapura" class="modal" (click)="closeModal($event, 'modalUltrapura')">
+        <div class="modal-content bg-transparent border-0">
+            <div class="my-1">
+                <span class="close" (click)="closeModal($event, 'modalUltrapura')">&times;</span>
+                <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
+                    <h4 class="mb-10 text-center text-lg font-medium text-black"><b>{{ 'tec33' | transloco }}</b></h4>
+                   
+                </div>
+                <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-orange-600/30 bg-white px-4 py-4 text-black-800 ">
+                    <h4>
+                        <ul class="list-disc ml-4">
+                            <h4 class="text-lg font-medium text-black">
+                                {{ 'tec34' | transloco }}
+                            </h4>
+                        
+                        <h4>
+                            {{ 'tec35' | transloco }}
+                        </h4>
+                      
+                        
+                        </ul>
+                      
+    
+    
+                        <br>
+                        <div class="grid lg:grid-cols-2 gap-3">
+                            <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                              <figure class="relative w-full h-60">
+                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapuraa.jpeg" alt="Image Description">
+                              </figure>
+                              <figure class="relative w-full h-60">
+                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura1.jpeg" alt="Image Description">
+                              </figure>
+                            </div>
+                            <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                              <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura2.jpeg" alt="Image Description">
+                            </figure>
+                          </div>
+                    </h4>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </div>
+
 <button *ngIf="mostrarBoton" (click)="scrollToTop()" class="fixed bottom-4 right-8 bg-white border border-orange-500 text-orange-500 px-4 py-2 rounded shadow-md">
     &#9650; <!-- Este es el carácter Unicode de la flecha hacia arriba -->
   </button>

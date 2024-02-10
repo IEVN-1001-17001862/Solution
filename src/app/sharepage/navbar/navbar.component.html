@@ -36,37 +36,50 @@
             
             
             
-            
-            
-            <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium relative overflow-hidden group" [routerLink]="['about']" routerLinkActive="active-link">
+            <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['/']" routerLinkActive="active-link">
+              <span class="relative z-1">
+                {{ 'home' | transloco }}
+              </span>
+              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
+            </a>
+            <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['about']" routerLinkActive="active-link">
               <span class="relative z-1">
                 {{ 'about' | transloco }}
               </span>
-              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0 transition-transform group-hover:scale-x-100"></span>
+              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
             </a>
-            <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium relative overflow-hidden group" [routerLink]="['menu']" routerLinkActive="active-link">
+            <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['menu']" routerLinkActive="active-link">
               <span class="relative z-1">
-                {{ 'Our Technologies' | transloco }}
+                {{ 'Ourtechnologies' | transloco }}
               </span>
-              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0 transition-transform group-hover:scale-x-100"></span>
+              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
             </a>
             
-            <a class="nav-link bg-transparent text-black rounded-md px-3 py-2 text-sm font-medium relative overflow-hidden group" [routerLink]="['contactanos']" routerLinkActive="active-link">
+            <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['contactanos']" routerLinkActive="active-link">
               <span class="relative z-1">
                 {{ 'Contact' | transloco }}
               </span>
-              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0 transition-transform group-hover:scale-x-100"></span>
+              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
             </a>
             
           </div>
           
         </div>
-        
-        <div class="flex flex-shrink-0 items-center ml-12">
+        <div class="flex flex-shrink-0 items-center justify-end" style="margin-right: -90px; margin-top: 20px;">
           <a [routerLink]="['/']"> 
-              <img class="h-20 w-auto" src="assets/solution.png" alt="Your Company">
+              <img style="height: 110px; width: auto;" src="assets/solution.png" alt="Your Company">
           </a>
       </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
       
       

@@ -6,10 +6,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   animations: [
-    trigger('fadeIn', [
+    trigger('fadeInLeft', [
       transition('hide => show', [
         style({ opacity: 0, transform: 'translateX(-100px)' }),
-        animate('0.5s ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
+        animate('0.9s ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
+      ])
+    ]),
+    trigger('fadeInRight', [
+      transition('hide => show', [
+        style({ opacity: 0, transform: 'translateX(100px)' }),
+        animate('2.0s ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
       ])
     ])
   ]
@@ -62,10 +68,10 @@ export class HomeComponent implements OnInit {
     });
 
     this.mostrarBoton = scrollPosition > 200; // Ajusta el valor según tus necesidades
+    this.state = this.mostrarBoton ? 'show' : 'hide';
   }
 
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
-

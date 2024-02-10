@@ -1,9 +1,25 @@
 import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
+  animations: [
+    trigger('fadeInLeft', [
+      transition('hide => show', [
+        style({ opacity: 0, transform: 'translateX(-100px)' }),
+        animate('0.9s ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
+      ])
+    ]),
+    trigger('fadeInRight', [
+      transition('hide => show', [
+        style({ opacity: 0, transform: 'translateX(100px)' }),
+        animate('2.0s ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
+      ])
+    ])
+  ]
 })
 export class AboutComponent implements OnInit {
   @ViewChild('changingImage', { static: true }) changingImage!: ElementRef;
@@ -20,6 +36,7 @@ export class AboutComponent implements OnInit {
 
   currentIndex = 0;
   mostrarBoton = false;
+  state = 'hide';
 
   constructor() {}
 
@@ -29,7 +46,9 @@ export class AboutComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    this.mostrarBoton = window.pageYOffset > 200;
+    const scrollPosition = window.pageYOffset;
+    this.mostrarBoton = scrollPosition > 200;
+    this.state = this.mostrarBoton ? 'show' : 'hide';
   }
 
   changeImage() {

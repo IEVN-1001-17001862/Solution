@@ -1,9 +1,18 @@
 import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
+  animations: [
+    trigger('fadeInLeft', [
+      transition('void => *', [
+        style({ opacity: 0, transform: 'translateX(-100px)' }),
+        animate('0.9s ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
+      ])
+    ])
+  ]
 })
 export class MenuComponent implements OnInit {
   mostrarBoton = false;
@@ -13,6 +22,9 @@ export class MenuComponent implements OnInit {
   ];
 
   @ViewChild('changingImage', { static: true }) changingImage!: ElementRef;
+
+  // Agregar la propiedad state
+  state: string = 'in';
 
   constructor() { }
 
@@ -51,4 +63,5 @@ export class MenuComponent implements OnInit {
     }
   }
 }
+
 
