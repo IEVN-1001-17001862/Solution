@@ -23,10 +23,11 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class HomeComponent implements OnInit {
   state = 'hide';
   images = [
-    'assets/2.png',
-    'assets/3.png',
-    'assets/12344.png',
-    'assets/solutionnidea.png',
+    
+    { path: 'assets/2.png'},
+    { path: 'assets/solution-carousel.jpg', text: 'Company dedicated to designing and building water treatment plants' },
+    { path: 'assets/solution-carousel2.jpg', text: 'The environmental, health, and safety practices at Solution Idea are implemented by professionals like us' },
+    { path: 'assets/solution-carousel3.jpg', text: 'Renewing, Solving Futures: Your Guarantee of Purity' },
     // ... más imágenes si es necesario
   ];
   images2 = [
