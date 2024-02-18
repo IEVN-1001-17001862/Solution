@@ -28,9 +28,15 @@
         <div class="hidden sm:ml-6 sm:block mt-4">
           <div class="flex space-x-4">
         
-            <button (click)="cambiarIdioma()" class="flex items-center">
-              <img [src]="banderaUrl" alt="Bandera" class="w-6 h-6 mr-2">
-            </button>
+            <div style="display: flex; align-items: center;">
+              <img src="/assets/usa.png" alt="USA Flag" (click)="seleccionarBandera('en')" style="cursor: pointer;" class="w-6 h-6 mr-2">
+              <img src="/assets/mexico.png" alt="Mexico Flag" (click)="seleccionarBandera('es')" style="cursor: pointer;"  class="w-6 h-6 mr-2">
+            </div>
+            
+            
+            
+            
+            
             
             
             
@@ -67,7 +73,7 @@
         </div>
         <div class="flex flex-shrink-0 items-center justify-end" style="margin-right: -90px; margin-top: 20px;">
           <a [routerLink]="['/']"> 
-              <img style="height: 110px; width: auto;" src="assets/solution.png" alt="Your Company">
+              <img style="height: 110px; width: auto;" src="assets/logo.jpg" alt="Your Company">
           </a>
       </div>
       

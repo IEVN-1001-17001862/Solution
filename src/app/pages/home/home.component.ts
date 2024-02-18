@@ -24,9 +24,9 @@ export class HomeComponent implements OnInit {
   state = 'hide';
   images = [
     
-    { path: 'assets/2.png'},
-    { path: 'assets/solution-carousel.jpg', text: 'Company dedicated to designing and building water treatment plants' },
-    { path: 'assets/solution-carousel2.jpg', text: 'The environmental, health, and safety practices at Solution Idea are implemented by professionals like us' },
+    { path: 'assets/inge2.png'},
+    { path: 'assets/homw.jpg', text: 'Company dedicated to designing and building water treatment plants' },
+    { path: 'assets/eli.jpg', text: 'The environmental, health, and safety practices at Solution Idea are implemented by professionals like us' },
     { path: 'assets/solution-carousel3.jpg', text: 'Renewing, Solving Futures: Your Guarantee of Purity' },
     // ... más imágenes si es necesario
   ];

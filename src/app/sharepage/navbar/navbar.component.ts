@@ -25,6 +25,13 @@ export class NavbarComponent implements OnInit {
   }
 
   private actualizarBandera(): void {
-    this.banderaUrl = this.idiomaActual === 'en' ? '/assets/usa.png' : '/assets/bandera.png';
+    this.banderaUrl = this.idiomaActual === 'en' ? '/assets/usa.png' : '/assets/mexico.png';
+  }
+
+  seleccionarBandera(codigoIdioma: string): void {
+    this.idiomaActual = codigoIdioma;
+    this.translocoService.setActiveLang(this.idiomaActual);
+    this.actualizarBandera();
   }
 }
+
