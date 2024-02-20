@@ -128,3 +128,19 @@
   display: block;
 }
 
+@media (max-width: 768px) {
+  .carousel-slide {
+    left: 0;
+  }
+}
+.platform {
+  position: relative;
+  transition: right 0.3s;
+}
+
+.body {
+  background-color: white !important;
+}
+.custom-max-width {
+  max-width: 90rem; /* Ajusta el valor según tus necesidades */
+}

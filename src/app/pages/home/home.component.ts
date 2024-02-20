@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -20,11 +20,10 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   state = 'hide';
   images = [
-    
-    { path: 'assets/inge2.png'},
+    { path: 'assets/inge2.png', text: 'Cost Effectiveness' },
     { path: 'assets/homw.jpg', text: 'Company dedicated to designing and building water treatment plants' },
     { path: 'assets/eli.jpg', text: 'The environmental, health, and safety practices at Solution Idea are implemented by professionals like us' },
     { path: 'assets/solution-carousel3.jpg', text: 'Renewing, Solving Futures: Your Guarantee of Purity' },
@@ -38,14 +37,26 @@ export class HomeComponent implements OnInit {
   ];
   activeSlide = 0;
   mostrarBoton: boolean = false;
+  galleryInterval: any;
 
   constructor() {}
 
   ngOnInit(): void {
-    // Inicia la función para cambiar automáticamente cada 2 segundos
-    setInterval(() => {
+    // Inicia la función para cambiar automáticamente cada tres segundos
+    this.galleryInterval = setInterval(() => {
       this.next();
-    }, 4000);
+    }, 3000);
+
+    // Inicia la galería
+    this.gallery.load();
+    this.galleryInterval = setInterval(() => {
+      this.gallery.next();
+    }, 3000);
+  }
+
+  ngOnDestroy(): void {
+    // Limpia el intervalo cuando el componente se destruye
+    clearInterval(this.galleryInterval);
   }
 
   next() {
@@ -75,4 +86,60 @@ export class HomeComponent implements OnInit {
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  // Galería de imágenes
+  private gallery: Gallery = new Gallery();
 }
+
+class Gallery {
+  private index: number = 0;
+  private rootEl: any;
+  private platform: any;
+  private frames: any;
+  private contentArea: any;
+  private width: number = 0;
+  private limit: { start: number, end: number } = { start: 0, end: 0 };
+
+  load() {
+    this.rootEl = document.querySelector(".gallery");
+    this.platform = this.rootEl.querySelector(".platform");
+    this.frames = this.platform.querySelectorAll(".each-frame");
+    this.contentArea = this.rootEl.querySelector(".content-area");
+    this.width = parseInt(this.rootEl.style.width);
+    this.limit = { start: 0, end: this.frames.length - 1 };
+    this.frames.forEach((each: any) => { each.style.width = this.width + "px"; });
+    this.goto(this.index);
+  }
+
+  next() {
+    if (this.index === this.limit.end) {
+      // Si llega al final, desactiva la animación temporalmente
+      this.platform.style.transition = 'none';
+      // Luego, vuelve al inicio sin animación
+      this.goto(this.limit.start);
+      // Vuelve a activar la animación después de un breve tiempo
+      setTimeout(() => {
+        this.platform.style.transition = '';
+      }, 10);
+    } else {
+      this.platform.style.right = this.width * ++this.index + "px";
+      this.set_title();
+    }
+  }
+
+  prev() {
+    this.platform.style.right = this.width * --this.index + "px";
+    this.set_title();
+  }
+
+  goto(index: number) {
+    this.platform.style.right = this.width * index + "px";
+    this.index = index;
+    this.set_title();
+  }
+
+  set_title() {
+    this.rootEl.querySelector(".heading").innerText = this.frames[this.index].getAttribute("title");
+  }
+}
+
