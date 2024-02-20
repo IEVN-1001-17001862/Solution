@@ -17,6 +17,11 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.translocoService.setActiveLang(this.idiomaActual);
   }
+  isMobileMenuOpen = false;
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 
   cambiarIdioma() {
     this.idiomaActual = this.idiomaActual === 'en' ? 'es' : 'en';

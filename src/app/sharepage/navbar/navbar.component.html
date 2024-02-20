@@ -1,9 +1,9 @@
 <nav class="bg-transparent">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+  <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
     <div class="relative flex h-20 items-center justify-between"> <!-- Ajusta la altura aquí -->
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
-        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+        <button type="button" (click)="toggleMobileMenu()" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" [attr.aria-expanded]="isMobileMenuOpen ? 'true' : 'false'">
           <span class="absolute -inset-0.5"></span>
           <span class="sr-only">Open main menu</span>
           <!--
@@ -71,9 +71,9 @@
           </div>
           
         </div>
-        <div class="flex flex-shrink-0 items-center justify-end" style="margin-right: -90px; margin-top: 20px;">
-          <a [routerLink]="['/']"> 
-              <img style="height: 110px; width: auto;" src="assets/logo.jpg" alt="Your Company">
+        <div class="flex flex-shrink-0 items-center justify-end" style="margin-top: 20px;">
+          <a [routerLink]="['/']" class="flex flex-shrink-0 items-center justify-end -mt-1"> 
+            <img src="assets/logo.jpg" alt="Solutio Idea" class="h-16 w-auto sm:h-20">
           </a>
       </div>
       
@@ -95,14 +95,21 @@
     </div>
   </div>
 
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
+  <div class="sm:hidden" id="mobile-menu" [class.hidden]="!isMobileMenuOpen">
     <div class="space-y-1 px-2 pb-3 pt-2">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+      <!-- Bloque de selección de banderas -->
+      <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+        <img src="/assets/usa.png" alt="USA Flag" (click)="seleccionarBandera('en')" style="cursor: pointer;" class="w-6 h-6 mr-2">
+        <img src="/assets/mexico.png" alt="Mexico Flag" (click)="seleccionarBandera('es')" style="cursor: pointer;" class="w-6 h-6 mr-2">
+      </div>
+      <!-- Enlaces del menú móvil -->
+      <a [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ 'home' | transloco }}</a>
+      <a [routerLink]="['/about']" routerLinkActive="active-link" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ 'about' | transloco }}</a>
+      <a [routerLink]="['/menu']" routerLinkActive="active-link" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ 'Ourtechnologies' | transloco }}</a>
+      <a [routerLink]="['/contactanos']" routerLinkActive="active-link" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ 'Contact' | transloco }}</a>
     </div>
   </div>
+  
+
+  
 </nav>
