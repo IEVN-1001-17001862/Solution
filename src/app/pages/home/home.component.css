@@ -144,104 +144,31 @@
 .custom-max-width {
   max-width: 90rem; /* Ajusta el valor según tus necesidades */
 }
-
-
-/* Asumiendo que tu texto está dentro de un contenedor con una clase .text-carousel */
-@media (max-width: 640px) { /* Ajusta este valor según tus puntos de interrupción deseados */
-  .text-carousel p {
-    position: relative;
-    top: -170px; /* Ajusta este valor según necesites */
-    font-size: 0.875rem; /* Este valor ya no es necesario ya que se está usando Tailwind para el tamaño del texto */
-  }
-}
-
-/* Asumiendo que tu texto está dentro de un contenedor con una clase .text-carousel */
-@media (max-width: 640px) { /* Ajusta este valor según tus puntos de interrupción deseados */
+/* Media queries para tamaños de texto más pequeños en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .text-carousel p,
   .text-carousel3 p {
-    position: relative;
-    top: -150px; /* Ajusta este valor según necesites */
-    font-size: 0.875rem; /* Este valor ya no es necesario ya que se está usando Tailwind para el tamaño del texto */
+    font-size: 0.75rem;
+    top: initial; /* Restaurar a la posición normal */
+    transform: translateY(50%); /* Ajusta según sea necesario para la posición del texto */
   }
 }
 
 @media (max-width: 640px) {
-  .text-very-small {
-    font-size: 8.5px !important;
-  }
-}
-@media (max-width: 640px) {
-  .text-very-small2 {
-    font-size: 7px !important;
-    margin-left: -10px !important; /* Mueve el texto ligeramente hacia la izquierda */
-  }
-}
-
-@media (max-width: 640px) {
-  .text-very-small3 {
-    font-size: 7.5px !important;
-    margin-left: -15px !important; /* Mueve el texto ligeramente hacia la izquierda */
-  }
-}
-
-
-/* Ajustes para pantallas de hasta 360px de ancho */
-@media (max-width: 360px) {
-  .text-carousel p {
-    top: -190px; /* Ajusta este valor según necesites */
-    font-size: 0.75rem; /* Ajuste el tamaño del texto para pantallas más pequeñas */
-  }
-}
-
-@media (max-width: 360px) {
+  .text-carousel p,
   .text-carousel3 p {
-    top: -150px; /* Ajusta este valor según necesites */
-    font-size: 0.75rem; /* Ajuste el tamaño del texto para pantallas más pequeñas */
+    font-size: 0.625rem;
+    top: initial; /* Restaurar a la posición normal */
+    transform: translateY(60%); /* Ajusta según sea necesario para la posición del texto */
   }
 }
 
-@media (max-width: 360px) {
-  .text-very-small {
-    font-size: 6.5px !important; /* Ajusta según sea necesario */
+@media (max-width: 480px) {
+  .text-carousel p,
+  .text-carousel3 p {
+    font-size: 0.5rem;
+    top: initial; /* Restaurar a la posición normal */
+    transform: translateY(70%); /* Ajusta según sea necesario para la posición del texto */
   }
 }
 
-@media (max-width: 360px) {
-  .text-very-small2 {
-    font-size: 6px !important;
-    margin-left: -10px !important; /* Ajusta según sea necesario */
-  }
-}
-
-@media (max-width: 360px) {
-  .text-very-small3 {
-    font-size: 6px !important;
-    margin-left: -15px !important; /* Ajusta según sea necesario */
-  }
-}
-
-
-/* Ajustes para iPad Pro en orientación paisaje */
-@media (min-width: 1024px) {
-  .text-carousel p, .text-carousel3 p {
-    top: -150px; /* Ajusta este valor según necesites para paisaje */
-    font-size: 20rem; /* Ajusta el tamaño del texto para pantallas más grandes */
-  }
-
-  .text-very-small, .text-very-small2, .text-very-small3 {
-    font-size: 20px !important; /* Ajusta según sea necesario para paisaje */
-    margin-left: 0 !important; /* Puede que no necesites ajustar el margen */
-  }
-}
-
-/* Ajustes específicos para iPad Pro en orientación retrato */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .text-carousel p, .text-carousel3 p {
-    top: -150px; /* Ajusta este valor según necesites para retrato */
-    font-size: 0.875rem; /* Este podría ser un buen punto de partida para retrato */
-  }
-
-  .text-very-small, .text-very-small2, .text-very-small3 {
-    font-size: 20px !important; /* Ajusta según sea necesario para retrato */
-    margin-left: -5px !important; /* Ajusta según sea necesario para retrato */
-  }
-}

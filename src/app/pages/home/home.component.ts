@@ -15,7 +15,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     trigger('fadeInRight', [
       transition('hide => show', [
         style({ opacity: 0, transform: 'translateX(100px)' }),
-        animate('2.0s ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
+        animate('1.0s ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
       ])
     ])
   ]
@@ -24,15 +24,22 @@ export class HomeComponent implements OnInit, OnDestroy {
   state = 'hide';
   images = [
     { path: 'assets/inge2.png', text: 'Cost Effectiveness' },
-    { path: 'assets/homw.jpg', text: 'Company dedicated to designing and building water treatment plants' },
-    { path: 'assets/eli.jpg', text: 'The environmental, health, and safety practices at Solution Idea are implemented by professionals like us' },
+    { path: 'assets/solution-carousel.png', text: 'Company dedicated to designing and building water treatment plants' },
+    { path: 'assets/eli.png', text: 'The environmental, health, and safety practices at Solution Idea are implemented by professionals like us' },
     { path: 'assets/solution-carousel3.jpg', text: 'Renewing, Solving Futures: Your Guarantee of Purity' },
     // ... más imágenes si es necesario
   ];
   images2 = [
-    { url: 'https://www.realestatemarket.com.mx/images/2019/11-Noviembre/2711/plantas_para_tratamiento_de_aguas.jpg', state: 'hide' },
-    { url: 'https://www.nyfdecolombia.com/aguas-residuales/images/industrial/envasa.jpg', state: 'hide' },
-    { url: 'https://marel.com/media/ju2jykdm/water-treatment.jpg', state: 'hide' }
+    { url: 'assets/flexibilidad.png', state: 'hide', alt: 'Alt Text 1', category: 'Flexibility', description: 'Adapt to future requirements, for example our versatileThe oxygen supply can be easily adjusted for nitrogen removal and create an anoxic zone in the reactor for ammonia metabolism; Tertiary and flow equalization systems can be easily added.'},
+    { url: 'assets/confiable.png', state: 'hide', alt: 'Alt Text 2', category: 'Reliable', description: 'Comply 24 hours a day, 7 days a week. with the download requirements, for example, the features and components of Our systems work together to effectively provide treatment. fluid and consistent throughout the useful life of the installation (alternating double redundancy).' },
+    { url: 'assets/eficient.png', state: 'hide', alt: 'Alt Text 3', category: 'Efficient', description: 'Reduce energy consumption, for example, our process. controllers are set to maintain dissolved oxygen between 2 and 4 ppm in the reactor (below the quality of the effluent is reduced, above it is wasted electricity); Airlifts save energy.' },
+    { url: 'assets/balanza.png', state: 'hide', alt: 'Alt Text 4', category: 'Stable', description: 'Resists impact loads, for example, our cameras and equipment. They are designed large enough to deal with spikes organic and hydraulic, and toxic substances that periodically hit the plant, which Allows rapid recovery from disturbances.' },
+    { url: 'assets/disponible.png', state: 'hide', alt: 'Alt Text 5', category: 'Category 5', description: 'Description 5' },
+    { url: 'assets/modular.png', state: 'hide', alt: 'Alt Text 6', category: 'Category 6', description: 'Description 6' },
+    { url: 'assets/factible.png', state: 'hide', alt: 'Alt Text 7', category: 'Category 7', description: 'Description 7' },
+    { url: 'assets/durable.png', state: 'hide', alt: 'Alt Text 8', category: 'Category 8', description: 'Description 8' },
+    { url: 'assets/odorless.png', state: 'hide', alt: 'Alt Text 9', category: 'Category 9', description: 'Description 9' },
+    { url: 'assets/quiet.png', state: 'hide', alt: 'Alt Text 10', category: 'Category 10', description: 'Description 10' }
     // ... más imágenes
   ];
   activeSlide = 0;
@@ -42,20 +49,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit(): void {
-    // Inicia la función para cambiar automáticamente cada tres segundos
     this.galleryInterval = setInterval(() => {
       this.next();
-    }, 3000);
-
-    // Inicia la galería
-    this.gallery.load();
-    this.galleryInterval = setInterval(() => {
-      this.gallery.next();
     }, 3000);
   }
 
   ngOnDestroy(): void {
-    // Limpia el intervalo cuando el componente se destruye
     clearInterval(this.galleryInterval);
   }
 
@@ -79,67 +78,11 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     });
 
-    this.mostrarBoton = scrollPosition > 200; // Ajusta el valor según tus necesidades
+    this.mostrarBoton = scrollPosition > 200;
     this.state = this.mostrarBoton ? 'show' : 'hide';
   }
 
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
-  // Galería de imágenes
-  private gallery: Gallery = new Gallery();
 }
-
-class Gallery {
-  private index: number = 0;
-  private rootEl: any;
-  private platform: any;
-  private frames: any;
-  private contentArea: any;
-  private width: number = 0;
-  private limit: { start: number, end: number } = { start: 0, end: 0 };
-
-  load() {
-    this.rootEl = document.querySelector(".gallery");
-    this.platform = this.rootEl.querySelector(".platform");
-    this.frames = this.platform.querySelectorAll(".each-frame");
-    this.contentArea = this.rootEl.querySelector(".content-area");
-    this.width = parseInt(this.rootEl.style.width);
-    this.limit = { start: 0, end: this.frames.length - 1 };
-    this.frames.forEach((each: any) => { each.style.width = this.width + "px"; });
-    this.goto(this.index);
-  }
-
-  next() {
-    if (this.index === this.limit.end) {
-      // Si llega al final, desactiva la animación temporalmente
-      this.platform.style.transition = 'none';
-      // Luego, vuelve al inicio sin animación
-      this.goto(this.limit.start);
-      // Vuelve a activar la animación después de un breve tiempo
-      setTimeout(() => {
-        this.platform.style.transition = '';
-      }, 10);
-    } else {
-      this.platform.style.right = this.width * ++this.index + "px";
-      this.set_title();
-    }
-  }
-
-  prev() {
-    this.platform.style.right = this.width * --this.index + "px";
-    this.set_title();
-  }
-
-  goto(index: number) {
-    this.platform.style.right = this.width * index + "px";
-    this.index = index;
-    this.set_title();
-  }
-
-  set_title() {
-    this.rootEl.querySelector(".heading").innerText = this.frames[this.index].getAttribute("title");
-  }
-}
-
