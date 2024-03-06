@@ -162,13 +162,16 @@
     transform: translateY(60%); /* Ajusta según sea necesario para la posición del texto */
   }
 }
-
 @media (max-width: 480px) {
-  .text-carousel p,
   .text-carousel3 p {
     font-size: 0.5rem;
+    margin-top: 20px; /* Ajusta según sea necesario para bajar el texto */
+    margin-left: 80px; /* Ajusta según sea necesario para mover el texto a la derecha */
+    position: relative; /* Ajustado a relative en lugar de absolute */
     top: initial; /* Restaurar a la posición normal */
-    transform: translateY(70%); /* Ajusta según sea necesario para la posición del texto */
+    transform: translateY(0); /* Ajusta según sea necesario para la posición del texto */
+
   }
 }
+
 

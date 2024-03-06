@@ -1,7 +1,7 @@
 <br>
+<div class="carousel-container relative lg:shadow-lg rounded-lg w-full mx-4 md:w-[95%] lg:w-[80%] xl:w-[90%] xl:mx-auto h-64 md:h-96 lg:h-112 xl:h-96 overflow-hidden rounded-lg mx-auto relative">
 
-<div class="carousel-container relative border-20 border-gray-400 shadow w-full sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[80%] mx-auto">
-  <div class="carousel-wrapper relative flex" style="margin-left: -5%; margin-right: -5%;">
+  <div class="carousel-wrapper relative flex">
     <div class="carousel-wrapper mx-[-0.25rem] relative">
       <div class="carousel-slide" *ngFor="let image of images; let i = index" [class.active]="i === activeSlide">
         <img [src]="image.path" alt="Slide image" class="w-full h-full object-cover rounded-2xl">
@@ -9,10 +9,10 @@
           <!-- Condición para la imagen específica -->
           <ng-container *ngIf="image.path === 'assets/solution-carousel.png'">
             <div class="text-carousel">
-              <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black italic ">
+              <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black italic">
                 {{ 'Company dedicated to designing' | transloco }}
               </p>
-              <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black italic ">
+              <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black italic">
                 {{ 'and building water treatment plants' | transloco }}
               </p>
             </div>
@@ -20,76 +20,202 @@
           <!-- Si no es la imagen específica, muestra el texto completo -->
           <ng-container *ngIf="image.path === 'assets/eli.png'">
             <div class="text-carousel">
-              <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black italic ">
+              <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black italic">
                 {{ 'The environmental, health, and safety' | transloco }}
               </p>
-              <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black italic ">
+              <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black italic">
                 {{ 'practices at Solution Idea are implemented' | transloco }}
               </p>
-              <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black italic ">
+              <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black italic">
                 {{ 'by professionals like us' | transloco }}
               </p>
             </div>
           </ng-container>
-
-    
           <ng-container *ngIf="image.path === 'assets/solution-carousel3.jpg'">
             <div class="text-carousel3">
               <p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-1 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] italic">
-                {{ 'Renewing, Solving Futures: Your Guarantee of Purity' | transloco }}
+                {{ 'Renewing, Solving Futures:' | transloco }}
+              </p><p class="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-zinc-500 font-black cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-1 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] italic">
+                {{ 'Your Guarantee of Purity' | transloco }}
               </p>
             </div>
           </ng-container>
         </div>
       </div>
     </div>
-    
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="text-center mt-4 lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold text-gray-600">
-  {{ 'Opting for our company ensures profitability and tangible benefits for your business.' | transloco }}
-</div>
 
-<br>
-<br>
-<div [@fadeInRight]="state" class="max-w-6xl mx-auto mt-4 bg-white rounded-xl overflow-hidden md:max-w-7xl rounded mx-auto m-5 bg-white shadow-lg">
-  <div class="md:flex">
 
-    <div class="main flex w-full p-8">
-      <div class="rounded mx-auto m-5 bg-white shadow-lg">
-        <img class="w-full h-96 md:h-full md:w-96 object-cover p-8 shadow-md" [src]="images2[activeSlide]?.url" alt="{{ images2[activeSlide]?.alt }}">
-      </div>
+<div class="mx-auto mt-0 mb-20 max-w-9xl text-center p-6 ">
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    <!-- Tarjeta 1 -->
+    <div class="relative group">
+      <a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 shadow-md border p-2"
+      href="#" target="_blank">
+            <img class="mb-4 w-40 h-40 sm:w-48 sm:h-48" src="assets/flexibilidad.png" alt="Framework7">
+            <div class="font-semibold text-black dark:text-white">Flexibility</div>
+        </a>
+        <!-- Nuevo card que aparecerá al hacer hover -->
+        <div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+            <p class="text-center text-xs">
+              Adapt to future requirements, for example our versatileThe oxygen supply can be easily adjusted for nitrogen removal and create an anoxic zone in the reactor for ammonia metabolism; Tertiary and flow equalization systems can be easily added.
+            </p>
+        </div>
     </div>
-    
-    <div class="p-10 flex flex-col justify-center">
-      <div class="uppercase tracking-wide text-lg lg:text-xl xl:text-1xl 1xl:text-3xl head text-3xl font-bold mb-4">
-        {{ images2[activeSlide]?.category}}
-      </div>
-    
-      <p class="text-lg lg:text-xl xl:text-1xl 1xl:text-3xl long-text text-lg text">
-        {{ images2[activeSlide]?.description}}
-      </p>
+    <!-- Repite la estructura para otras tarjetas -->
+    <!-- Tarjeta 2 -->
+    <div class="relative group">
+      <a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 shadow-md border p-2"
+      href="#" target="_blank">
+            <img class="mb-4 w-40 h-40 sm:w-48 sm:h-48" src="assets/confiable.png" alt="Framework7">
+            <div class="font-semibold text-black dark:text-white">Reliable</div>
+        </a>
+        <!-- Nuevo card que aparecerá al hacer hover -->
+        <div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+            <p class="text-center text-xs">
+              Comply 24 hours a day, 7 days a week. with the download requirements, for example, the features and components of Our systems work together to effectively provide treatment. fluid and consistent throughout the useful life of the installation (alternating double redundancy).
+            </p>
+        </div>
     </div>
-    
-    
+    <!-- Repite la estructura para otras tarjetas -->
+    <!-- Tarjeta 3 -->
+    <div class="relative group">
+      <a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 shadow-md border p-2"
+      href="#" target="_blank">
+          <img class="mb-4 w-40 h-40 sm:w-48 sm:h-48" src="assets/efficient.png" alt="Framework7">
+          <div class="font-semibold text-black dark:text-white">Efficient</div>
+      </a>
+      <!-- Nuevo card que aparecerá al hacer hover -->
+      <div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+          <p class="text-center text-xs">
+            Reduce energy consumption, for example, our process. controllers are set to maintain dissolved oxygen between 2 and 4 ppm in the reactor (below the quality of the effluent is reduced, above it is wasted electricity); Airlifts save energy.            </p>
+      </div>
   </div>
+  <!-- Repite la estructura para otras tarjetas -->
+  <!-- Tarjeta 4 -->
+  <div class="relative group">
+    <a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 shadow-md border p-2"
+    href="#" target="_blank">
+        <img class="mb-4 w-40 h-40 sm:w-48 sm:h-48" src="assets/balanza.png" alt="Framework7">
+        <div class="font-semibold text-black dark:text-white">Stable</div>
+    </a>
+    <!-- Nuevo card que aparecerá al hacer hover -->
+    <div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+        <p class="text-center text-xs">
+          Resists impact loads, for example, our cameras and equipment. They are designed large enough to deal with spikes organic and hydraulic, and toxic substances that periodically hit the plant, which Allows rapid recovery from disturbances.          </p>
+    </div>
+</div>
+<!-- Repite la estructura para otras tarjetas -->
+<!-- Tarjeta 5 -->
+<div class="relative group">
+  <a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 shadow-md border p-2"
+      href="#" target="_blank">
+      <img class="mb-4 w-40 h-40 sm:w-48 sm:h-48" src="assets/disponible.png" alt="Framework7">
+      <div class="font-semibold text-black dark:text-white">Available</div>
+  </a>
+  <!-- Nuevo card que aparecerá al hacer hover -->
+  <div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+      <p class="text-center text-xs">
+        Improve the performance of the delivery, for example, our new systems are prefabricated
+        and pre-assembled in the workshop; The equipment mounted with skates is installed quickly
+        There the door can be moved through the biomass system.  </p>
+  </div>
+  
+</div>
+<!-- Repite la estructura para otras tarjetas -->
+<!-- Tarjeta 6 -->
+<div class="relative group">
+<a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 shadow-md border p-2"
+href="#" target="_blank">
+    <img class="mb-4 w-40 h-40 sm:w-48 sm:h-48" src="assets/factible.png" alt="Framework7">
+    <div class="font-semibold text-black dark:text-white">Feasible</div>
+</a>
+<!-- Nuevo card que aparecerá al hacer hover -->
+<div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+    <p class="text-center text-xs">
+      Facilitate operation and maintenance; For example, the operation
+      Automatic only requires simple checks. The air vents can be
+      Easily close, dismantle, service, repair and replace from the walkway.
+      Easy training of unqualified personnel. O&M manual in your preferred language. </p>
+</div>
+
+</div>
+<!-- Repite la estructura para otras tarjetas -->
+<!-- Tarjeta 7 -->
+<div class="relative group">
+<a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 shadow-md border p-2"
+href="#" target="_blank">
+    <img class="mb-4 w-40 h-40 sm:w-48 sm:h-48" src="assets/durable.png" alt="Framework7">
+    <div class="font-semibold text-black dark:text-white">Durable</div>
+</a>
+<!-- Nuevo card que aparecerá al hacer hover -->
+<div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+    <p class="text-center text-xs">
+      Adapt to future requirements, for example our versatile
+      Oxygen supply can be easily adjusted for nitrogen removal
+      and create an anoxic zone in the reactor for ammonia metabolism;
+      Tertiary and flow equalization systems can be easily added.</p>
+</div>
+
+</div>
+<!-- Repite la estructura para otras tarjetas -->
+<!-- Tarjeta 8 -->
+<div class="relative group">
+<a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 shadow-md border p-2"
+href="#" target="_blank">
+    <img class="mb-4 w-40 h-40 sm:w-48 sm:h-48" src="assets/odorless.png" alt="Framework7">
+    <div class="font-semibold text-black dark:text-white">Odorless</div>
+</a>
+<!-- Nuevo card que aparecerá al hacer hover -->
+<div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+    <p class="text-center text-xs">
+      Ensures aerobic conditions, for example, the geometry of
+chamber and oxygen supply provide complete mixing, eliminating
+bags that cause offensive odors (i.e. hydrogen sulfide). He
+Aerobic treatment can only create odorless methane in the reactor and digester.</p>
+</div>
+
+</div>
+<!-- Repite la estructura para otras tarjetas -->
+<!-- Tarjeta 9 -->
+<div class="relative group">
+<a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 shadow-md border p-2"
+href="#" target="_blank">
+    <img class="mb-4 w-40 h-40 sm:w-48 sm:h-48" src="assets/quiet.png" alt="Framework7">
+    <div class="font-semibold text-black dark:text-white">Quiet</div>
+</a>
+<!-- Nuevo card que aparecerá al hacer hover -->
+<div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+    <p class="text-center text-xs">
+      Reduce noise pollution, for example, our blowers are
+larger and are equipped with intake and discharge silencers, and a
+Fiberglass acoustic enclosure to attenuate noise. Also available
+Ultra-quiet oxygen delivery systems.</p>
+</div>
+
+</div>
+<!-- Repite la estructura para otras tarjetas -->
+<!-- Tarjeta 10 -->
+<div class="relative group">
+<a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 shadow-md border p-2"
+href="#" target="_blank">
+    <img class="mb-4 w-40 h-40 sm:w-48 sm:h-48" src="assets/modular.png" alt="Framework7">
+    <div class="font-semibold text-black dark:text-white">Modular</div>
+</a>
+<!-- Nuevo card que aparecerá al hacer hover -->
+<div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+    <p class="text-center text-xs">
+      Add capacity and/or features, e.g. new
+Customized treatment modules can be easily and economically added
+that the population of the future project grows; You can easily add a
+tertiary treatment (sand filter/media or membrane).</p>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -102,10 +228,13 @@
 
 
 
+
+
 <br>
 <br>
 <br>
-<br>
+
+
 
 
 <div [@fadeInRight]="state" class="max-w-6xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-7xl">
@@ -195,64 +324,162 @@
  
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<p class="text-center mt-4 lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold text-gray-600">
-  {{ 'Learn more about us and what drives our dedication' | transloco }}
-
-</p>
-<br>
- 
 
 
-<!-- ... tu contenido actual ... -->
-
-<!-- ... tu contenido actual ... -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 p-10">
-  <!-- Card 1 -->
-  <div class="relative group bg-white hover:shadow-orange-400 hover:shadow-md rounded-lg orange-400 border">
-    <div class="p-1 rounded-t-lg bg-orange-300"></div>
-    <div class="flex flex-col rounded p-2 lg:p-4">
-      <img class="w-full h-30 object-cover rounded-t-lg" src="assets/mision.png" alt="Fast-Track Image">
-      <p class="text-sm text-center font-bold tracking-tight pt-2">Mision</p>
+<div class="mx-auto mt-24 mb-20 max-w-9xl text-center p-6">
+  <p class="text-center mt-4 lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold text-gray-600">
+    {{ 'Learn more about us and what drives our dedication' | transloco }}
+  </p>
+  <br>
+  <br>
+  <div class="container mx-auto py-12 flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-8">
+    <!-- Tarjeta 1 -->
+    <div class="relative group max-w-lg">
+      <div class="p-1 rounded-t-lg bg-orange-300"></div>
+      <a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10"
+        href="#" target="_blank">
+        <img class="mb-4 w-64 h-64 sm:w-full sm:h-72 object-cover" src="assets/mision.png" alt="Framework7">
+        <div class="font-semibold text-black dark:text-white">Mision</div>
+      </a>
+      <!-- Nuevo card que aparecerá al hacer hover -->
+      <div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+        <p class="text-center text-sm">
+          {{ 'The mission of Solution Idea is to commit our resources to provide engineering excellence in the fields of project and construction management,' | transloco }}
+          {{ 'environmental engineering, and due diligence by focusing on cost, quality, time and safety.' | transloco }}
+        </p>
+      </div>
     </div>
-    <!-- Nuevo card que aparecerá al pasar el mouse -->
-    <div class="hidden group-hover:block absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 flex items-center justify-center">
-      <p class="py-20 text-center text-sm">{{ 'The mission of Solution Idea is to commit our resources to provide engineering excellence in the fields of project and construction management,' | transloco }}
-        {{ 'environmental engineering, and due diligence by focusing on cost, quality, time and safety.' | transloco }}!</p>
-    </div>
+    <!-- Tarjeta 2 -->
+    <div class="relative group max-w-lg">
+      <div class="p-1 rounded-t-lg bg-orange-300"></div>
+      <a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10"
+        href="#" target="_blank">
+        <img class="mb-4 w-64 h-64 sm:w-full sm:h-72 object-cover" src="assets/vision.png" alt="Framework7">
+        <div class="font-semibold text-black dark:text-white">Vision</div>
+      </a>
+      <!-- Nuevo card que aparecerá al hacer hover -->
+      <div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block overflow-hidden">
+        <p class="text-center text-sm leading-tight overflow-ellipsis h-10">
+          {{ 'homelongvision' | transloco }}
+        </p>
+      </div>
   </div>
-
-  <!-- Card 2 -->
-  <div class="relative group bg-white hover:shadow-indigo-300 hover:shadow-md rounded-lg bg-indigo-50/30 border">
-    <div class="p-1 rounded-t-lg bg-sky-400"></div>
-    <div class="flex flex-col rounded p-2 lg:p-4">
-      <img class="w-full h-30 object-cover rounded-t-lg" src="assets/vision.png" alt="Fast-Track Image">
-      <p class="text-sm text-center font-bold tracking-tight pt-2">Vision</p>
-    </div>
-    <!-- Nuevo card que aparecerá al pasar el mouse -->
-    <div class="hidden group-hover:block absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-indigo-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 flex items-center justify-center">
-      <p class="py-12 text-center text-sm">{{ 'homelongvision' | transloco }}
-      </p>
-    </div>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="relative group bg-white hover:shadow-lime-300 hover:shadow-md rounded-lg bg-lime-300 border">
-    <div class="p-1 rounded-t-lg bg-lime-300"></div>
-    <div class="flex flex-col rounded p-2 lg:p-4">
-      <img class="w-full h-30 object-cover rounded-t-lg" src="assets/valores.png" alt="Fast-Track Image">
-      <p class="text-sm text-center font-bold tracking-tight pt-2">Valores</p>
-    </div>
-    <!-- Nuevo card que aparecerá al pasar el mouse -->
-    <div class="hidden group-hover:block absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-lime-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 flex items-center justify-center">
-      <p class="py-12 text-center text-sm">{{ 'values' | transloco }}</p>
+  
+  
+  
+    <!-- Tarjeta 3 -->
+    <div class="relative group max-w-lg">
+      <div class="p-1 rounded-t-lg bg-orange-300"></div>
+      <a class="flex flex-col items-center justify-center rounded-xl border border-black border-opacity-10 px-6 py-8 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10"
+        href="#" target="_blank">
+        <img class="mb-4 w-64 h-64 sm:w-full sm:h-72 object-cover" src="assets/valores.png" alt="Framework7">
+        <div class="font-semibold text-black dark:text-white">Valores</div>
+      </a>
+      <!-- Nuevo card que aparecerá al hacer hover -->
+      <div class="hidden absolute top-0 left-0 right-0 bottom-0 bg-white hover:shadow-orange-300 hover:shadow-md rounded-lg bg-indigo-50/30 border p-5 lg:p-8 group-hover:block">
+        <p class="text-center text-sm">
+          {{ 'values' | transloco }}
+        </p>
+      </div>
     </div>
   </div>
 </div>
+
+<div class="grid grid-cols-1 gap-8 p-10 mt-14 lg:grid-cols-2 xl:grid-cols-4">
+  <!-- Value card -->
+  <div class="flex items-center shadow justify-between p-4 bg-white rounded-md dark:bg-darker">
+      <div>
+          <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
+              Value
+          </h6>
+          <span class="text-xl font-semibold">$30,000</span>
+          <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
+              +4.4%
+          </span>
+      </div>
+      <div>
+          <span>
+              <svg class="w-12 h-12 text-gray-300 dark:text-primary-dark" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                  </path>
+              </svg>
+          </span>
+      </div>
+  </div>
+
+  <!-- Users card -->
+  <div class="flex items-center shadow justify-between p-4 bg-white rounded-md dark:bg-darker">
+      <div>
+          <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
+              Users
+          </h6>
+          <span class="text-xl font-semibold">50,021</span>
+          <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
+              +2.6%
+          </span>
+      </div>
+      <div>
+          <span>
+              <svg class="w-12 h-12 text-gray-300 dark:text-primary-dark" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                  </path>
+              </svg>
+          </span>
+      </div>
+  </div>
+
+  <!-- Orders card -->
+  <div class="flex items-center shadow justify-between p-4 bg-white rounded-md dark:bg-darker">
+      <div>
+          <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
+              Orders
+          </h6>
+          <span class="text-xl font-semibold">45,021</span>
+          <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
+              +3.1%
+          </span>
+      </div>
+      <div>
+          <span>
+              <svg class="w-12 h-12 text-gray-300 dark:text-primary-dark" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+              </svg>
+          </span>
+      </div>
+  </div>
+
+  <!-- Tickets card -->
+  <div class="flex items-center shadow justify-between p-4 bg-white rounded-md dark:bg-darker">
+      <div>
+          <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
+              Tickets
+          </h6>
+          <span class="text-xl font-semibold">20,516</span>
+          <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
+              +3.1%
+          </span>
+      </div>
+      <div>
+          <span>
+              <svg class="w-12 h-12 text-gray-300 dark:text-primary-dark" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
+                  </path>
+              </svg>
+          </span>
+      </div>
+  </div>
+</div>
+
+
+
 
 <button *ngIf="mostrarBoton" (click)="scrollToTop()" class="fixed bottom-10 right-8 bg-white border border-orange-500 text-orange-500 px-4 py-2 rounded shadow-md">
   &#9650; <!-- Este es el carácter Unicode de la flecha hacia arriba -->

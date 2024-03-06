@@ -31,57 +31,44 @@
     
     <div id="modalWastewater" class="modal" (click)="closeModal($event, 'modalWastewater')">
         <div class="modal-content bg-transparent border-0">
-            <div class="my-1">
-                <span class="close" (click)="closeModal($event, 'modalWastewater')">&times;</span>
-                <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-orange-600/30 px-4 py-2 text-gray-100">
-                    <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
-                        {{ 'tec4' | transloco }}
-                        
-                    </b></h4>
-                    
-                 
-                </div>
-                <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-white-600/30 bg-white px-4 py-4 text-black-800 ">
-                    <h4>
-                     
-                        <br>
-                        <h4 class="text-lg font-medium text-black">
-                            {{ 'tec5' | transloco }}
-                        
-                        </h4>
-                        <h4>
-                            {{ 'tec6' | transloco }}
-                            
-        
-        
-                        </h4>
-                        {{ 'tec7' | transloco }}
-                        
-                        <h4>
-    
-                        </h4>
-                        <br>
-                        <div class="grid lg:grid-cols-2 gap-3">
-                            <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
-                              <figure class="relative w-full h-60">
-                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapuraa.jpeg" alt="Image Description">
-                              </figure>
-                              <figure class="relative w-full h-60">
-                                <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura1.jpeg" alt="Image Description">
-                              </figure>
-                            </div>
-                            <figure class="relative w-full h-72 sm:h-96 lg:h-full">
-                              <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura2.jpeg" alt="Image Description">
-                            </figure>
-                          </div>
-                        
-                        
-                    </h4>
-                </div>
+          <div class="my-1">
+            <!-- Botón de cierre ajustado para celulares -->
+            <span class="close absolute top-4 right-4 lg:top-8 lg:right-8 text-3xl cursor-pointer text-white">&times;</span>
+      
+            <!-- Contenido del modal -->
+            <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-orange-600/30 px-4 py-2 text-gray-100">
+              <h4 class="mb-10 text-center text-lg font-medium text-black"><b>{{ 'tec4' | transloco }}</b></h4>
             </div>
-            
+      
+            <!-- Contenido principal del modal -->
+            <div class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-white-600/30 bg-white px-4 py-4 text-black-800">
+              <h4>
+                <br>
+                <h4 class="text-lg font-medium text-black">{{ 'tec5' | transloco }}</h4>
+                <h4>{{ 'tec6' | transloco }}</h4>
+                {{ 'tec7' | transloco }}
+                <h4></h4>
+                <br>
+                <div class="grid lg:grid-cols-2 gap-3">
+                  <div class="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                    <figure class="relative w-full h-48 sm:h-60 md:h-72 lg:h-60">
+                      <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapuraa.jpeg" alt="Image Description">
+                    </figure>
+                    <figure class="relative w-full h-48 sm:h-60 md:h-72 lg:h-60">
+                      <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura1.jpeg" alt="Image Description">
+                    </figure>
+                  </div>
+                  <figure class="relative w-full h-72 sm:h-96 lg:h-full">
+                    <img class="w-full h-full absolute top-0 start-0 object-cover rounded-xl" src="assets/ultrapura2.jpeg" alt="Image Description">
+                  </figure>
+                </div>
+              </h4>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+      
+      
     <!--industrial-->
     <div class="px-0 py-6 lg:py-0 w-full">
         <div class="bg-white lg:mx-8 lg:flex lg:max-w-2xl lg:shadow-lg rounded-lg">
@@ -106,7 +93,7 @@
     <div id="modalIndustrial" class="modal" (click)="closeModal($event, 'modalIndustrial')">
         <div class="modal-content bg-transparent border-0">
             <div class="my-1">
-                <span class="close" (click)="closeModal($event, 'modalIndustrial')">&times;</span>
+                <span class="close absolute top-4 right-4 lg:top-8 lg:right-8 text-3xl cursor-pointer text-white">&times;</span>
                 <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-orange-600/30 px-4 py-2 text-gray-100">
                     <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
                         {{ 'tec10' | transloco }}
@@ -176,7 +163,7 @@
     <div id="modalSoftened" class="modal" (click)="closeModal($event, 'modalSoftened')">
         <div class="modal-content bg-transparent border-0">
             <div class="my-1">
-                <span class="close" (click)="closeModal($event, 'modalSoftened')">&times;</span>
+                <span class="close absolute top-4 right-4 lg:top-8 lg:right-8 text-3xl cursor-pointer text-white">&times;</span>
                 <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
                     <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
                         {{ 'tec15' | transloco }}
@@ -262,7 +249,7 @@
     <div id="modalOsmosis" class="modal" (click)="closeModal($event, 'modalOsmosis')">
         <div class="modal-content bg-transparent border-0">
             <div class="my-1">
-                <span class="close" (click)="closeModal($event, 'modalOsmosis')">&times;</span>
+                <span class="close absolute top-4 right-4 lg:top-8 lg:right-8 text-3xl cursor-pointer text-white">&times;</span>
                 <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
                     <h4 class="mb-10 text-center text-lg font-medium text-black"><b>
                         {{ 'tec23' | transloco }}
@@ -349,7 +336,7 @@
     <div id="modalUltrapura" class="modal" (click)="closeModal($event, 'modalUltrapura')">
         <div class="modal-content bg-transparent border-0">
             <div class="my-1">
-                <span class="close" (click)="closeModal($event, 'modalUltrapura')">&times;</span>
+                <span class="close absolute top-4 right-4 lg:top-8 lg:right-8 text-3xl cursor-pointer text-white">&times;</span>
                 <div class="rounded-t-2xl bg-orange-300 w-full select-none border-2 border-teal-600/30 px-4 py-2 text-gray-100">
                     <h4 class="mb-10 text-center text-lg font-medium text-black"><b>{{ 'tec33' | transloco }}</b></h4>
                    

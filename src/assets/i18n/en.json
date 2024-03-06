@@ -28,7 +28,7 @@
   "by professionals like us":"by professionals like us",
   "Company dedicated to designing":"Company dedicated to designing",
   "and building water treatment plants":"and building water treatment plants",
-  "Renewing, Solving Futures: Your Guarantee of Purity":"Renewing, Solving Futures: Your Guarantee of Purity",
+  "Renewing, Solving Futures:":"Renewing, Solving Futures:",
   
   
 
@@ -68,7 +68,7 @@
   "tec20":"Reverse Osmosis: Can remove certain minerals and contaminants.",
   "tec21":"Reverse Osmosis Water",
   "tec22":"Purified water achieved through reverse osmosis filtration, removing impurities for versatile use, from drinking to industrial applications.",
-  "tec23":" Reverse Osmosis Water",
+  "tec23":"Reverse Osmosis Water",
   "tec24":"Reverse osmosis (RO) is an advanced water treatment process that relies on the use of a semipermeable membrane to purify water by removing impurities and contaminants. Here's a technical explanation of how it works and some key applications:",
   "tec25":"Operation parameters:",
   "tec26":"Operating Pressure",
@@ -89,5 +89,6 @@
   "Ourtecnologies":"Our Tecnologies",
   "contacto":"See location",
   "contacto1":"See location",
-  "contacto2":"See location"
+  "contacto2":"See location",
+  "Your Guarantee of Purity":"Your Guarantee of Purity"
 }

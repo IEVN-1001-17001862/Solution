@@ -43,26 +43,27 @@
             
             
             <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['/']" routerLinkActive="active-link">
-              <span class="relative z-1">
+              <span class="relative z-1 font-bold">
                 {{ 'home' | transloco }}
               </span>
               <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
             </a>
             <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['about']" routerLinkActive="active-link">
-              <span class="relative z-1">
-                {{ 'about' | transloco }}
+              <span class="relative z-1 font-bold">
+                  {{ 'about' | transloco }}
               </span>
               <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
-            </a>
+          </a>
+          
             <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['menu']" routerLinkActive="active-link">
-              <span class="relative z-1">
+              <span class="relative z-1 font-bold">
                 {{ 'Ourtechnologies' | transloco }}
               </span>
               <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
             </a>
             
             <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['contactanos']" routerLinkActive="active-link">
-              <span class="relative z-1">
+              <span class="relative z-1 font-bold">
                 {{ 'Contact' | transloco }}
               </span>
               <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
@@ -71,11 +72,17 @@
           </div>
           
         </div>
-        <div class="flex flex-shrink-0 items-center justify-end" style="margin-top: 34px;">
-          <a [routerLink]="['/']" class="flex flex-shrink-0 items-center justify-end -mt-1"> 
-            <img src="assets/logo.jpg" alt="Solution Idea" class="h-16 w-auto sm:h-10 md:h-24 lg:h-32 xl:h-20">
+        <div class="flex flex-shrink-0 items-center justify-end mt-[-1px] md:mt-[-25px] lg:mr-[-100px]"style="margin-top: 25px;">
+          <a [routerLink]="['/']" class="flex flex-shrink-0 items-center justify-end"> 
+            <img src="assets/logo.png" alt="Solution Idea" class="h-20 w-auto sm:h-12 md:h-32 lg:h-40 xl:h-28">
           </a>
         </div>
+        
+        
+        
+        
+        
+        
         
       
       
