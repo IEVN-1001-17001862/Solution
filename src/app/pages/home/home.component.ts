@@ -1,24 +1,9 @@
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  animations: [
-    trigger('fadeInLeft', [
-      transition('hide => show', [
-        style({ opacity: 0, transform: 'translateX(-100px)' }),
-        animate('0.9s ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
-      ])
-    ]),
-    trigger('fadeInRight', [
-      transition('hide => show', [
-        style({ opacity: 0, transform: 'translateX(100px)' }),
-        animate('1.0s ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
-      ])
-    ])
-  ]
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
   state = 'hide';
@@ -84,5 +69,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  @HostListener('contextmenu', ['$event'])
+  onContextMenu(event: MouseEvent): void {
+    event.preventDefault();
   }
 }
