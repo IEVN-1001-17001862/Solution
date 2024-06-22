@@ -1,123 +1,67 @@
-<nav class="bg-transparent">
-  <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-    <div class="relative flex h-20 items-center justify-between"> <!-- Ajusta la altura aquí -->
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" (click)="toggleMobileMenu()" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" [attr.aria-expanded]="isMobileMenuOpen ? 'true' : 'false'">
-          <span class="absolute -inset-0.5"></span>
-          <span class="sr-only">Open main menu</span>
-          <!--
-            Icon when menu is closed.
-          Menu open: "hidden", Menu closed: "block"
-          -->
-          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-          <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
-          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <div class="flex flex-1 items-center justify-end sm:items-stretch sm:justify-end"> <!-- Cambio aquí -->
-        
-        <div class="hidden sm:ml-6 sm:block mt-4">
-          <div class="flex space-x-4">
-        
-            <div style="display: flex; align-items: center;">
-              <img src="/assets/usa.png" alt="USA Flag" (click)="seleccionarBandera('en')" style="cursor: pointer;" class="w-6 h-6 mr-2">
-              <img src="/assets/mexico.png" alt="Mexico Flag" (click)="seleccionarBandera('es')" style="cursor: pointer;"  class="w-6 h-6 mr-2">
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['/']" routerLinkActive="active-link">
-              <span class="relative z-1 font-bold">
-                {{ 'home' | transloco }}
-              </span>
-              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
-            </a>
-            <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['about']" routerLinkActive="active-link">
-              <span class="relative z-1 font-bold">
-                  {{ 'about' | transloco }}
-              </span>
-              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
-          </a>
-          
-            <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['menu']" routerLinkActive="active-link">
-              <span class="relative z-1 font-bold">
-                {{ 'Ourtechnologies' | transloco }}
-              </span>
-              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
-            </a>
-            
-            <a class="nav-link bg-transparent text-black rounded-md px-3 py-5 text-sm font-medium relative overflow-hidden group" [routerLink]="['contactanos']" routerLinkActive="active-link">
-              <span class="relative z-1 font-bold">
-                {{ 'Contact' | transloco }}
-              </span>
-              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
-            </a>
-            
-          </div>
-          
-        </div>
-        <div class="flex flex-shrink-0 items-center justify-end mt-[-1px] md:mt-[-25px] lg:mr-[-100px]"style="margin-top: 25px;">
-          <a [routerLink]="['/']" class="flex flex-shrink-0 items-center justify-end"> 
-            <img src="assets/logo.png" alt="Solution Idea" class="h-20 w-auto sm:h-12 md:h-32 lg:h-40 xl:h-28">
-          </a>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-      
-      
-      
-      </div>
-    
-    </div>
+<!-- Primer navbar -->
+<nav id="firstNavbar" class="bg-slate-50 text-white py-3 px-4 flex items-center justify-between transition-transform duration-300 fixed w-full top-0 z-50">
+  <a class="font-bold text-xl tracking-tight" href="https://wa.me/5214771405327?text=Hola%20quisiera%20más%20información" >My Site</a>
+  <div class="flex items-center mt-2">
+    <a class="text-sm font-extrabold text-black px-3 py-1 leading-none rounded-full hover:bg-slate-100" href="https://wa.me/5214771405327?text=Hola%20quisiera%20más%20información">Trabaja con nosotros</a>
   </div>
-
-  <div class="sm:hidden" id="mobile-menu" [class.hidden]="!isMobileMenuOpen">
-    <div class="space-y-1 px-2 pb-3 pt-2">
-      <!-- Bloque de selección de banderas -->
-      <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
-        <img src="/assets/usa.png" alt="USA Flag" (click)="seleccionarBandera('en')" style="cursor: pointer;" class="w-6 h-6 mr-2">
-        <img src="/assets/mexico.png" alt="Mexico Flag" (click)="seleccionarBandera('es')" style="cursor: pointer;" class="w-6 h-6 mr-2">
-      </div>
-      <!-- Enlaces del menú móvil -->
-      <a [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ 'home' | transloco }}</a>
-      <a [routerLink]="['/about']" routerLinkActive="active-link" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ 'about' | transloco }}</a>
-      <a [routerLink]="['/menu']" routerLinkActive="active-link" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ 'Ourtechnologies' | transloco }}</a>
-      <a [routerLink]="['/contactanos']" routerLinkActive="active-link" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">{{ 'Contact' | transloco }}</a>
-    </div>
-  </div>
-  
-
-  
 </nav>
+
+<!-- Contenido adicional -->
+<div class="relative w-full mt-16 md:mt-0 h-[320px] md:h-[600px] lg:h-[620px] shadow-2xl">
+  <div class="absolute inset-0 overflow-hidden">
+    <img src="assets/banner.jpeg" alt="Background Image" class="object-cover object-center w-full h-full" />
+  </div>
+  <div class="absolute inset-9 flex flex-col md:flex-row items-center justify-between z-10 mt-16">
+    <div class="md:w-1/2 mb-4 md:mb-0">
+      <br>  
+      <br>   
+      <p class="text-4xl font-extrabold text-gray-900 dark:text-white">Company dedicated to designing and building water treatment plants</p>
+      <br>
+      <a href="#contactUs" class="px-6 py-3 bg-[#4B84DC] text-white font-medium rounded-full hover:bg-[#c09858] transition duration-200">Cotizar</a>
+    </div>
+  </div>
+</div>
+x
+<!-- Segundo navbar -->
+<nav id="secondNavbar" class="second-navbar" [ngClass]="{ 'hidden': !scrolledToTop }">
+  <div class="flex items-center">
+    <div class="text-xl">
+      <img src="assets/logo4.png" alt="Logo" class="h-20 w-auto sm:h-12 md:h-32 lg:h-30 xl:h-20">
+    </div>
+    <div class="ml-2 text-lg text-white">Solution Idea, LLC</div>
+  </div>
+  
+  <div class="flex md:hidden">
+    <button id="hamburger">
+      <img class="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
+      <img class="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
+    </button>
+  </div>
+  <div class="toggle hidden w-full md:w-auto md:flex text-right text-bold mt-2 md:border-none">
+    <div style="display: flex; align-items: center;">
+      <img src="/assets/usa.png" alt="USA Flag" (click)="seleccionarBandera('en')" style="cursor: pointer;" class="w-6 h-6 mr-2">
+      <img src="/assets/mexico.png" alt="Mexico Flag" (click)="seleccionarBandera('es')" style="cursor: pointer;" class="w-6 h-6 mr-2">
+    </div>
+    <a class="nav-link bg-transparent text-white rounded-md px-3 py-2 text-sm md:text-xl font-medium relative overflow-hidden group" [routerLink]="['/']" routerLinkActive="active-link">
+      <span class="relative z-1 font-bold">{{ 'home' | transloco }}</span>
+      <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
+    </a>
+    <a class="nav-link bg-transparent text-white rounded-md px-3 py-2 text-sm md:text-xl font-medium relative overflow-hidden group" [routerLink]="['about']" routerLinkActive="active-link">
+      <span class="relative z-1 font-bold">{{ 'about' | transloco }}</span>
+      <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
+    </a>
+    <a class="nav-link bg-transparent text-white rounded-md px-3 py-2 text-sm md:text-xl font-medium relative overflow-hidden group" [routerLink]="['contactanos']" routerLinkActive="active-link">
+      <span class="relative z-1 font-bold">{{ 'Service' | transloco }}</span>
+      <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
+    </a>
+    <a class="nav-link bg-transparent text-white rounded-md px-3 py-2 text-sm md:text-xl font-medium relative overflow-hidden group" [routerLink]="['menu']" routerLinkActive="active-link">
+      <span class="relative z-1 font-bold">{{ 'Ourtechnologies' | transloco }}</span>
+      <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
+    </a>
+    <a class="nav-link bg-transparent text-white rounded-md px-3 py-2 text-sm md:text-xl font-medium relative overflow-hidden group" [routerLink]="['contactanos']" routerLinkActive="active-link">
+      <span class="relative z-1 font-bold">{{ 'Contact' | transloco }}</span>
+      <span class="absolute inset-x-0 bottom-0 h-0.5 bg-black origin-left transform scale-x-0"></span>
+    </a>
+  </div>
+</nav>
+

@@ -173,5 +173,134 @@
 
   }
 }
+.font-extrabold {
+  font-weight: 800; /* Asegúrate de que este valor esté definido */
+}
+.text-6xl {
+  font-size: 4rem; /* Ajusta el tamaño según tus necesidades */
+}
+.text-gray-900 {
+  color: #1a202c; /* Color gris oscuro */
+}
+.dark\:text-dark {
+  color: #000; /* Color negro en modo oscuro */
+}
+#solucionesTitulo {
+  font-weight: bold; /* Asegura que el texto sea muy negrito */
+  font-size: 2rem; /* Tamaño del texto para pantallas más pequeñas */
+}
+
+@media (min-width: 1024px) {
+  #solucionesTitulo {
+    font-size: 2rem; /* Tamaño del texto para pantallas grandes */
+  }
+}
+.custom-text-color {
+  color: #164074; /* Cambia este valor por el color que desees */
+  text-decoration: none; /* Para eliminar el subrayado predeterminado en los enlaces */
+}
+
+.custom-text-color:hover {
+  background-color: #dce4e8; /* Color de fondo al pasar el mouse */
+}
+.whatsapp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366; /* Color de fondo de WhatsApp */
+  border-radius: 50px;
+  padding: 8px 10px; /* Reducir padding horizontal para menos ancho */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  margin-top: 10px; /* Espacio entre el iframe y el botón */
+  width: fit-content; /* Ajuste para que el botón se ajuste al contenido */
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1); /* Efecto de hover para resaltar */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra más grande en hover */
+}
+
+.whatsapp-icon img {
+  width: 24px; /* Tamaño del ícono ajustado */
+  margin-right: 4px; /* Espacio entre el ícono y el texto */
+}
+
+.whatsapp-icon span {
+  font-size: 14px; /* Tamaño de fuente ajustado */
+  font-weight: bold;
+}
+.custom-text-color {
+  display: block;
+  margin-top: 10px;
+}
+.image-wrapper {
+  overflow: hidden;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 200px; /* Altura fija para todas las imágenes */
+}
+
+.fixed-size-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.group-hover .image-container img {
+  opacity: 0;
+}
+
+.relative a p {
+  margin-top: 5px;
+}
+
+.relative hr {
+  width: 100%;
+  margin-top: 10px; /* Margen superior para el separador */
+}
+
+.relative .py-6 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinear elementos en la parte superior */
+  align-items: center;
+  text-align: center;
+}
+
+.relative .py-6 p {
+  margin-bottom: 5px; /* Espacio debajo del texto */
+}
+
+.relative .hidden p {
+  margin-top: 10px; /* Ajustar el margen para el texto oculto */
+}
+.relative a p {
+  margin-top: 5px;
+}
+
+.relative hr {
+  width: 100%;
+}
+
+.relative .py-4 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items at the start */
+  align-items: center;
+  text-align: center;
+}
 
 
+
+.group:hover .hidden {
+  display: block;
+}

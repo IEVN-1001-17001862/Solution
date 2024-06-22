@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
@@ -9,6 +9,8 @@ import { TranslocoService } from '@ngneat/transloco';
 export class NavbarComponent implements OnInit {
   idiomaActual = 'en';
   banderaUrl: string = '/assets/usa.png';  // Asegúrate de proporcionar la ruta correcta a tu imagen
+  isMobileMenuOpen = false;
+  scrolledToTop = true; // Agregamos una bandera para saber si estamos en la parte superior de la página
 
   constructor(private translocoService: TranslocoService) {
     console.log(this.translocoService.translate('hello'));
@@ -17,7 +19,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.translocoService.setActiveLang(this.idiomaActual);
   }
-  isMobileMenuOpen = false;
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
@@ -38,5 +39,11 @@ export class NavbarComponent implements OnInit {
     this.translocoService.setActiveLang(this.idiomaActual);
     this.actualizarBandera();
   }
-}
 
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Verificar si estamos en la parte superior de la página
+    this.scrolledToTop = scrollTop < 50; // Ajusta el valor de 50 según sea necesario
+  }
+}

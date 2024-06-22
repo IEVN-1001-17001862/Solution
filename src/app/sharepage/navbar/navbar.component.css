@@ -1,0 +1,36 @@
+
+  nav.second-navbar a {
+    color: white;
+    font-size: 1.1rem; /* Tamaño de fuente ajustado */
+    padding: 0.5rem 1rem;
+  }
+
+  /* Estilos para el segundo navbar */
+
+  nav.second-navbar {
+    position: fixed;
+    top: 7%; /* Ajuste el valor según sea necesario para mover el segundo navbar hacia arriba */
+    left: 0;
+    width: 100%;
+    z-index: 60; /* Asegura que esté por encima del overlay */
+    background-color: rgba(59, 99, 154, 0.8); /* Fondo oscuro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .second-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegúrate de que el z-index sea mayor que el del primer navbar */
+    background-color: #ffffff; /* Cambia al color de fondo deseado */
+    transition: top 0.3s ease-in-out; /* Agrega una transición suave */
+  }
+  
+  .second-navbar.hidden {
+    top: -300px; /* Ajusta la altura a la que quieres ocultar el navbar */
+  }
+  
